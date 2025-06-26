@@ -21,12 +21,32 @@
 @mixin sub-widths($number) {
   min-width: utils.unquote('#{$number}px');
   width: utils.unquote("#{$number}%");
-  max-width: utils.unquote("#{$number}%");
+  //max-width: utils.unquote("#{$number}%");
 }
 @mixin sub-heights($number) {
   min-height: utils.unquote('#{$number}px');
   height: utils.unquote("#{$number}%");
-  max-height: utils.unquote("#{$number}%");
+  //max-height: utils.unquote("#{$number}%");
+}
+
+@mixin generate-grid-gen-classes($sizes) {
+  @each $size in $sizes {
+    // Both width & height
+    .grid-gen-#{$size} > * > * {
+      min-width: #{$size}rem;
+      min-height: #{$size}rem;
+    }
+
+    // Width only
+    .grid-gen-#{$size}w > * > * {
+      min-width: #{$size}rem;
+    }
+
+    // Height only
+    .grid-gen-#{$size}h > * > * {
+      min-height: #{$size}rem;
+    }
+  }
 }
 
 // First define the list of color names
@@ -116,6 +136,8 @@ $shades: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900);
   border-color: transparent;
 }
 html {
+  max-width: 100vw;
+  min-height: 100vh;
   height: 100%;
 }
 // Base styles
@@ -171,29 +193,36 @@ button:not(:has(> i)) {
 // region Grid
 %grid-base {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min-width, 100px)), 1fr));
-  grid-auto-rows: 1fr;
-  //grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
 }
+
 .grid {
   @extend %grid-base;
-  // Span all columns in a row
-  &-row {
-    grid-column: 1 / -1;  // From first to last column
-  }
 
-  // Span all rows in a column
-  &-col {
-    grid-row: 1 / -1;     // From first to last row
-  }
-  // Makes all cells (at least) 1rem x 1rem (w x h)
-  &-gen-1 {
-    > * {
-      min-width: 1rem;
-      min-height: 1rem;
+  // Dynamic vertical columns (each is a column of stacked cells)
+  &.cols {
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, 1fr); // ← force equal column widths
+
+    > .grid-col {
+      display: grid;
+      grid-auto-flow: row;
     }
   }
+
+  // Dynamic horizontal rows (each is a row of inline cells)
+  &.rows {
+    grid-auto-flow: row;
+
+    > .grid-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); // 4rem = min cell width
+    }
+  }
+
 }
+
+@include generate-grid-gen-classes((1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+
 // endregion
 
 // region Flex
