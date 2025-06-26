@@ -1,0 +1,47 @@
+@use 'imports' as imports;
+@use 'utils' as utils;
+@use 'variables' as *;
+// region Input, Button, and Link Styles
+
+/// region Buttons
+button {
+  color: $button-text;
+  font-weight: bold;
+  @include utils.transition(all);
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+//// region Buttons without an <i> inside
+button:not(:has(> i)) {
+  cursor: pointer;
+  background: rgba($button, $button-opacity);
+  border: 1px solid $button-border;
+  padding: $button-padding;
+  border-radius: $border-radius;
+  $color-variants: 'primary', 'secondary', 'tertiary', 'quaternary', 'red', 'green', 'blue', 'cyan', 'yellow', 'magenta';
+  @each $variant in $color-variants {
+    &.#{$variant} {
+      @include utils.colored-button($variant);
+    }
+  }
+  &.small {
+    padding: $button-padding-small;
+  }
+  &.large {
+    padding: $button-padding-large;
+  }
+  &:hover {
+    background: $button-hover;
+  }
+}
+//// endregion
+/// endregion
+
+/// region Links
+a {
+  @include utils.generate-a-gradient-variants;
+}
+/// endregion
+
+// endregion

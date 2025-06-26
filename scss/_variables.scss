@@ -65,34 +65,32 @@ $secondary-800: #9d174d !default;
 /// Darkest shade of secondary
 $secondary-900: #831843 !default;
 // endregion
-// region Tertiary: Lime green
-/// Lightest shade of tertiary
-$tertiary-50: #f7fee7;   // Lightest lime
-$tertiary-100: #ecfccb;
-$tertiary-200: #d9f99d;
-$tertiary-300: #bef264;
-$tertiary-400: #a3e635;
-$tertiary-500: #84cc16;  // Main lime
-$tertiary: #84cc16;  // Main lime
-$tertiary-600: #65a30d;
-$tertiary-700: #4d7c0f;
-$tertiary-800: #3f6212;
-$tertiary-900: #365314;  // Darkest lime
-
+// region Tertiary: Electric blue
+$tertiary-50: #f0f9ff;
+$tertiary-100: #e0f2fe;
+$tertiary-200: #bae6fd;
+$tertiary-300: #7dd3fc;
+$tertiary-400: #38bdf8;
+$tertiary-500: #0ea5e9;  // Main electric blue
+$tertiary: #0ea5e9;
+$tertiary-600: #0284c7;
+$tertiary-700: #0369a1;
+$tertiary-800: #075985;
+$tertiary-900: #0c4a6e;
 // endregion
-// region Quaternary: Electric blue
-/// Lightest shade of quaternary
-$quaternary-50: #f0f9ff;   // Lightest electric blue
-$quaternary-100: #e0f2fe;
-$quaternary-200: #bae6fd;
-$quaternary-300: #7dd3fc;
-$quaternary-400: #38bdf8;
-$quaternary-500: #0ea5e9;  // Main electric blue
-$quaternary: #0ea5e9;  // Main electric blue
-$quaternary-600: #0284c7;
-$quaternary-700: #0369a1;
-$quaternary-800: #075985;
-$quaternary-900: #0c4a6e;  // Darkest electric blue
+
+// region Quaternary: Lime green
+$quaternary-50: #f7fee7;
+$quaternary-100: #ecfccb;
+$quaternary-200: #d9f99d;
+$quaternary-300: #bef264;
+$quaternary-400: #a3e635;
+$quaternary-500: #84cc16;  // Main lime
+$quaternary: #84cc16;
+$quaternary-600: #65a30d;
+$quaternary-700: #4d7c0f;
+$quaternary-800: #3f6212;
+$quaternary-900: #365314;
 // endregion
 // region Red
 /// Lightest shade of red

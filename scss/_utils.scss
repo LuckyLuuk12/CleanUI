@@ -1,9 +1,191 @@
-// Because Sass is being annoying and removed public library functions from their stuff I had to make this...
-@forward "sass:map";
-@forward "sass:color";
-@forward "sass:math";
-@forward "sass:string";
+@use "imports" as imports;
+@use "variables" as *;
 
-/* Then in your other files, and use e.g. utils.get() instead of map.get()
- *  @use './utils' as utils;
- */
+// Mixin for smooth hover transitions
+@mixin transition($props...) {
+  transition: $props 0.3s ease;
+}
+
+@mixin colored-button($name) {
+  background: rgba(imports.get($variables, $name + '-500'), $button-opacity);
+  backdrop-filter: blur(24px);
+  border: 2px solid imports.get($variables, $name + '-900');
+
+  &:hover {
+    background: rgba(imports.get($variables, $name + '-800'), $button-opacity);
+
+  }
+}
+
+@mixin sub-widths($number) {
+  min-width: imports.unquote('#{$number}px');
+  width: imports.unquote("#{$number}%");
+  //max-width: imports.unquote("#{$number}%");
+}
+@mixin sub-heights($number) {
+  min-height: imports.unquote('#{$number}px');
+  height: imports.unquote("#{$number}%");
+  //max-height: imports.unquote("#{$number}%");
+}
+
+@mixin generate-grid-gen-classes($sizes) {
+  @each $size in $sizes {
+    // Both width & height
+    .grid-gen-#{$size} > * > * {
+      min-width: #{$size}rem;
+      min-height: #{$size}rem;
+    }
+
+    // Width only
+    .grid-gen-#{$size}w > * > * {
+      min-width: #{$size}rem;
+    }
+
+    // Height only
+    .grid-gen-#{$size}h > * > * {
+      min-height: #{$size}rem;
+    }
+  }
+}
+
+// First define the list of color names
+$color-variants: (
+        'dark',
+        'light',
+        'primary',
+        'secondary',
+        'tertiary',
+        'quaternary',
+        'red',
+        'green',
+        'blue',
+        'cyan',
+        'yellow',
+        'magenta'
+);
+$shades: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900);
+
+@mixin generate-color-classes {
+  @each $color in $color-variants {
+    // Base color classes (using 500 shade)
+    .#{$color} {
+      background-color: imports.get($variables, $color);
+    }
+    // Default text variant (using 500 shade)
+    .#{$color}-text {
+      color: imports.get($variables, $color);
+    }
+    .#{$color}-text-border {
+      text-shadow:
+              -1px -1px 0 imports.get($variables, $color),
+              1px -1px 0 imports.get($variables, $color),
+              -1px  1px 0 imports.get($variables, $color),
+              1px  1px 0 imports.get($variables, $color);
+    }
+
+    // Default border variant (using 500 shade)
+    .#{$color}-border {
+      border: 1px solid imports.get($variables, $color);
+    }
+    .#{$color}-border-color {
+      border-color: imports.get($variables, $color);
+    }
+
+    // Default hover state (using 700 shade)
+    .#{$color}-hover:hover {
+      background-color: imports.get($variables, "#{$color}-700");
+    }
+
+    // Generate classes for each shade
+    @each $shade in $shades {
+      // Background variants
+      .#{$color}-#{$shade} {
+        background: imports.get($variables, "#{$color}-#{$shade}");
+      }
+
+      // Text variants
+      .#{$color}-#{$shade}-text {
+        color: imports.get($variables, "#{$color}-#{$shade}");
+      }
+
+      // Border variants
+      .#{$color}-#{$shade}-border {
+        border: 1px solid imports.get($variables, "#{$color}-#{$shade}");
+      }
+      .#{$color}-#{$shade}-border-color {
+        border-color: imports.get($variables, "#{$color}-#{$shade}");
+      }
+
+      // Hover variants for each shade
+      .#{$color}-#{$shade}-hover:hover {
+        background-color: imports.get($variables, "#{$color}-#{if($shade < 900, $shade + 100, 900)}");
+      }
+    }
+  }
+}
+
+@mixin generate-a-gradient-variants {
+  @each $c1 in $color-variants {
+    @each $c2 in $color-variants {
+      // 2-color mirrored gradient
+      &.gradient-#{$c1}-#{$c2} {
+        background: linear-gradient(90deg, imports.get($variables, $c1), imports.get($variables, $c2), imports.get($variables, $c1));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        text-decoration: none;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          bottom: -2px;
+          width: 100%;
+          height: 3px;
+          background: linear-gradient(90deg, imports.get($variables, $c1), imports.get($variables, $c2), imports.get($variables, $c1));
+          transform: translateX(-50%) scaleX(0.2);
+          transform-origin: center;
+          transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          border-radius: 2px;
+          pointer-events: none;
+        }
+        &:hover::after {
+          transform: translateX(-50%) scaleX(1);
+        }
+      }
+
+      @each $c3 in $color-variants {
+        // 3-color mirrored gradient
+        &.gradient-#{$c1}-#{$c2}-#{$c3} {
+          background: linear-gradient(90deg, imports.get($variables, $c1), imports.get($variables, $c2), imports.get($variables, $c3), imports.get($variables, $c2), imports.get($variables, $c1));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent;
+          text-decoration: none;
+          position: relative;
+
+          &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, imports.get($variables, $c1), imports.get($variables, $c2), imports.get($variables, $c3), imports.get($variables, $c2), imports.get($variables, $c1));
+            transform: translateX(-50%) scaleX(0.2);
+            transform-origin: center;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 2px;
+            pointer-events: none;
+          }
+          &:hover::after {
+            transform: translateX(-50%) scaleX(1);
+          }
+        }
+      }
+    }
+  }
+}
