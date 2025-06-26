@@ -11,20 +11,51 @@
   padding: 0;
   margin: 0;
   border-color: transparent;
+  scrollbar-width: none;
+  &:disabled {
+    background: $dark-600 !important;
+    color: $placeholder;
+    cursor: not-allowed !important;
+    opacity: 0.7;
+    &:hover {
+      border-color: $red-700;
+    }
+  }
 }
 html {
+  background: #000;
   max-width: 100vw;
   min-height: 100vh;
   height: 100%;
 }
 body {
-  min-width: 100vw;
-  max-width: 100vw;
+  min-width: 100%;
+  max-width: 100%;
   min-height: 100vh;
   height: 100%;
   font-family: $font;
   background: $background;
   color: $text;
+}
+@media (max-width: 1200px) {
+  html {
+    font-size: 85%;
+  }
+}
+@media (max-width: 900px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 75%;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
 }
 // endregion
 

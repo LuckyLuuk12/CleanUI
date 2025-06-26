@@ -15,11 +15,14 @@
   // Dynamic vertical columns (each is a column of stacked cells)
   &.cols {
     grid-auto-flow: column;
-    grid-template-columns: repeat(auto-fit, 1fr); // ← force equal column widths
+    //grid-template-columns: repeat(auto-fit, 1fr); // ← force equal column widths
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); // 180px is minimal column width
 
     > .grid-col {
-      display: grid;
-      grid-auto-flow: row;
+      overflow: hidden;
+
+      //display: grid;
+      //grid-template-rows: repeat(auto-fit, minmax(0, 1fr)); // 4rem = min cell height
     }
   }
 
@@ -29,7 +32,7 @@
 
     > .grid-row {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); // 4rem = min cell width
+      grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr)); // 4rem = min cell width
     }
   }
 
@@ -66,6 +69,7 @@
 
 // region Other
 .container {
+  overflow: scroll;
   background: $container;
   padding: $container-padding;
   border-radius: $container-border-radius;

@@ -5,6 +5,7 @@
 
 /// region Buttons
 button {
+  text-align: center;
   color: $button-text;
   font-weight: bold;
   @include utils.transition(all);
@@ -14,6 +15,7 @@ button {
 }
 //// region Buttons without an <i> inside
 button:not(:has(> i)) {
+  text-align: center;
   cursor: pointer;
   background: rgba($button, $button-opacity);
   border: 1px solid $button-border;
@@ -42,6 +44,224 @@ button:not(:has(> i)) {
 a {
   @include utils.generate-a-gradient-variants;
 }
+/// endregion
+
+/// region Inputs
+//// region input, textarea, select, fieldset
+input,
+textarea,
+select,
+fieldset {
+  background: $dark-500;
+  color: $text;
+  border: 1px solid $dark-300;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+
+  &:hover {
+    border-color: $secondary;
+  }
+
+  &:focus {
+    border-color: $primary;
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+  }
+
+  &::placeholder {
+    color: $placeholder;
+    opacity: 1;
+  }
+
+  &:disabled {
+    background: $dark-600;
+    color: $placeholder;
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+}
+//// endregion
+//// region file input
+// Modified From: https://www.viget.com/articles/styling-native-file-upload-input-field/
+input[type="file"] {
+  padding: 0.25rem;
+  margin: -0.25rem;
+  position: relative;
+  outline: none;
+
+  &::file-selector-button {
+    border-radius: $border-radius-small;
+    padding: 0 1rem;
+    height: 2.5rem;
+    cursor: pointer;
+    background-color: $button;
+    border: 1px solid $dark-400;
+    box-shadow: 0 0.0625rem 0 $dark-700;
+    margin-right: 1rem;
+    width: 8.25rem;
+    color: transparent;
+
+    @supports (-moz-appearance: none) {
+      color: $primary;
+    }
+
+    &:hover {
+      background-color: $button-hover;
+    }
+
+    &:active {
+      background-color: $dark-600;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    pointer-events: none;
+    top: 0.875rem;
+    left: 1rem;
+    height: 1.25rem;
+    width: 1.25rem;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23#{$primary-700}'%3E%3Cpath d='M18 15v3H6v-3H4v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2zM7 9l1.41 1.41L11 7.83V16h2V7.83l2.59 2.58L17 9l-5-5-5 5z'/%3E%3C/svg%3E");
+  }
+
+  &::after {
+    position: absolute;
+    pointer-events: none;
+    top: 1rem;
+    left: 2.5rem;
+    color: $primary;
+    content: "Upload File";
+  }
+
+  &:focus-within::file-selector-button,
+  &:focus::file-selector-button {
+    outline: 0.125rem solid $primary;
+    outline-offset: 0.125rem;
+  }
+}
+//// endregion
+//// region color input
+input[type="color"] {
+  cursor: pointer;
+  padding: 0.1rem;
+  &::-webkit-color-swatch-wrapper {
+    padding: 0.1rem;
+  }
+  &::-webkit-color-swatch,  &::-moz-color-swatch {
+      border: 1px solid $dark-300;
+      border-radius: $border-radius-small;
+  }
+}
+//// endregion
+//// region Range slider
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 0.25rem;
+  border: none;
+  background: transparent; /* track color (fallback) */
+}
+
+/* Track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background: $dark-300;
+  height: 0.25rem;
+  border-radius: $border-radius-small;
+}
+input[type="range"]::-moz-range-track {
+  background: $dark-300;
+  height: 0.25rem;
+  border-radius: $border-radius-small;
+}
+
+/* Thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: $primary;
+  border: $primary-900;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin-top: -0.35rem; /* align vertically */
+}
+input[type="range"]::-moz-range-thumb, input[type="range"]::-ms-thumb  {
+  background: $primary;
+  border: $primary-900;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+}
+//// endregion
+//// region number input
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+//// endregion
+//// region Checkbox & Radio
+input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: $primary;
+
+  // Fallback for older browsers
+  &:checked {
+    background: $primary;
+    border-color: $primary;
+  }
+}
+
+// Radio: use $secondary when checked
+// Hide native radio and create a custom one
+input[type="radio"] {
+  cursor: pointer;
+  accent-color: $primary;
+  background: $dark-500;
+  border: 1px solid $secondary;
+
+
+  &:checked {
+    border-color: $dark-200;
+    background: $primary;
+  }
+
+  // Custom inner circle for checked state
+  &:checked::after {
+    content: "";
+    width: 0;
+    height: 0;
+  }
+}
+//// endregion
+//// region Submit button
+input[type="submit"], button[type="submit"] {
+  background: $primary;
+  color: $button-text;
+  padding: $button-padding;
+  border-radius: $border-radius;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid transparent;
+
+  &:hover {
+    background: $primary-700;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    background: $primary-800;
+    transform: scale(0.95);
+  }
+
+}
+//// endregion
 /// endregion
 
 // endregion

@@ -2,6 +2,7 @@
  *  @use './utils' as utils;
  */
 button {
+  text-align: center;
   color: #ffffff;
   font-weight: bold;
   transition: all 0.3s ease;
@@ -11,6 +12,7 @@ button:hover {
 }
 
 button:not(:has(> i)) {
+  text-align: center;
   cursor: pointer;
   background: rgba(69, 69, 74, 0.9);
   border: 1px solid #bcbcc6;
@@ -48780,6 +48782,206 @@ a.gradient-magenta-magenta-magenta:hover::after {
   transform: translateX(-50%) scaleX(1);
 }
 
+input,
+textarea,
+select,
+fieldset {
+  background: #45454a;
+  color: #ffffff;
+  border: 1px solid #65656c;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+input:hover,
+textarea:hover,
+select:hover,
+fieldset:hover {
+  border-color: #ec4899;
+}
+input:focus,
+textarea:focus,
+select:focus,
+fieldset:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+}
+input::placeholder,
+textarea::placeholder,
+select::placeholder,
+fieldset::placeholder {
+  color: #a0a0aa;
+  opacity: 1;
+}
+input:disabled,
+textarea:disabled,
+select:disabled,
+fieldset:disabled {
+  background: #35353a;
+  color: #a0a0aa;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+input[type=file] {
+  padding: 0.25rem;
+  margin: -0.25rem;
+  position: relative;
+  outline: none;
+}
+input[type=file]::file-selector-button {
+  border-radius: 0.25rem;
+  padding: 0 1rem;
+  height: 2.5rem;
+  cursor: pointer;
+  background-color: #45454a;
+  border: 1px solid #55555b;
+  box-shadow: 0 0.0625rem 0 #26262a;
+  margin-right: 1rem;
+  width: 8.25rem;
+  color: transparent;
+}
+@supports (-moz-appearance: none) {
+  input[type=file]::file-selector-button {
+    color: #8b5cf6;
+  }
+}
+input[type=file]::file-selector-button:hover {
+  background-color: #35353a;
+}
+input[type=file]::file-selector-button:active {
+  background-color: #35353a;
+}
+input[type=file]::before {
+  position: absolute;
+  pointer-events: none;
+  top: 0.875rem;
+  left: 1rem;
+  height: 1.25rem;
+  width: 1.25rem;
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23#6d28d9'%3E%3Cpath d='M18 15v3H6v-3H4v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2zM7 9l1.41 1.41L11 7.83V16h2V7.83l2.59 2.58L17 9l-5-5-5 5z'/%3E%3C/svg%3E");
+}
+input[type=file]::after {
+  position: absolute;
+  pointer-events: none;
+  top: 1rem;
+  left: 2.5rem;
+  color: #8b5cf6;
+  content: "Upload File";
+}
+input[type=file]:focus-within::file-selector-button, input[type=file]:focus::file-selector-button {
+  outline: 0.125rem solid #8b5cf6;
+  outline-offset: 0.125rem;
+}
+
+input[type=color] {
+  cursor: pointer;
+  padding: 0.1rem;
+}
+input[type=color]::-webkit-color-swatch-wrapper {
+  padding: 0.1rem;
+}
+input[type=color]::-webkit-color-swatch, input[type=color]::-moz-color-swatch {
+  border: 1px solid #65656c;
+  border-radius: 0.25rem;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  height: 0.25rem;
+  border: none;
+  background: transparent; /* track color (fallback) */
+}
+
+/* Track */
+input[type=range]::-webkit-slider-runnable-track {
+  background: #65656c;
+  height: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+input[type=range]::-moz-range-track {
+  background: #65656c;
+  height: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+/* Thumb */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #8b5cf6;
+  border: #4c1d95;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin-top: -0.35rem; /* align vertically */
+}
+
+input[type=range]::-moz-range-thumb, input[type=range]::-ms-thumb {
+  background: #8b5cf6;
+  border: #4c1d95;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+}
+
+input[type=number] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=checkbox] {
+  cursor: pointer;
+  accent-color: #8b5cf6;
+}
+input[type=checkbox]:checked {
+  background: #8b5cf6;
+  border-color: #8b5cf6;
+}
+
+input[type=radio] {
+  cursor: pointer;
+  accent-color: #8b5cf6;
+  background: #45454a;
+  border: 1px solid #ec4899;
+}
+input[type=radio]:checked {
+  border-color: #75757d;
+  background: #8b5cf6;
+}
+input[type=radio]:checked::after {
+  content: "";
+  width: 0;
+  height: 0;
+}
+
+input[type=submit], button[type=submit] {
+  background: #8b5cf6;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid transparent;
+}
+input[type=submit]:hover, button[type=submit]:hover {
+  background: #6d28d9;
+  transform: scale(1.05);
+}
+input[type=submit]:active, button[type=submit]:active {
+  background: #5b21b6;
+  transform: scale(0.95);
+}
+
 .dark {
   background-color: #0a0a0f;
 }
@@ -51426,18 +51628,17 @@ a.gradient-magenta-magenta-magenta:hover::after {
 
 .grid.cols {
   grid-auto-flow: column;
-  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
 }
 .grid.cols > .grid-col {
-  display: grid;
-  grid-auto-flow: row;
+  overflow: hidden;
 }
 .grid.rows {
   grid-auto-flow: row;
 }
 .grid.rows > .grid-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
 }
 
 .grid-gen-1 > * > * {
@@ -51588,6 +51789,7 @@ a.gradient-magenta-magenta-magenta:hover::after {
 }
 
 .container {
+  overflow: scroll;
   background: #1e1e20;
   padding: 1.5rem;
   border-radius: 0.5rem;
@@ -51688,20 +51890,52 @@ a.gradient-magenta-magenta-magenta:hover::after {
   padding: 0;
   margin: 0;
   border-color: transparent;
+  scrollbar-width: none;
+}
+*:disabled {
+  background: #35353a !important;
+  color: #a0a0aa;
+  cursor: not-allowed !important;
+  opacity: 0.7;
+}
+*:disabled:hover {
+  border-color: #b91c1c;
 }
 
 html {
+  background: #000;
   max-width: 100vw;
   min-height: 100vh;
   height: 100%;
 }
 
 body {
-  min-width: 100vw;
-  max-width: 100vw;
+  min-width: 100%;
+  max-width: 100%;
   min-height: 100vh;
   height: 100%;
   font-family: "Open sans", Tahoma, Geneva, sans-serif;
   background: #0a0a0f;
   color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 85%;
+  }
+}
+@media (max-width: 900px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 75%;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
 }
