@@ -1,3 +1,6 @@
+/* Then in your other files, and use e.g. utils.get() instead of map.get()
+ *  @use './utils' as utils;
+ */
 * {
   box-sizing: border-box;
   padding: 0;

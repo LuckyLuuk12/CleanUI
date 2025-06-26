@@ -1,6 +1,5 @@
 // region Imports & Util
-@use 'sass:map';
-@use 'sass:string';
+@use './utils' as utils;
 @use './variables' as *;
 
 // Mixin for smooth hover transitions
@@ -9,25 +8,25 @@
 }
 
 @mixin colored-button($name) {
-  background: rgba(map.get($variables, $name + '-500'), $button-opacity);
+  background: rgba(utils.get($variables, $name + '-500'), $button-opacity);
   backdrop-filter: blur(24px);
-  border: 2px solid map.get($variables, $name + '-900');
+  border: 2px solid utils.get($variables, $name + '-900');
 
   &:hover {
-    background: rgba(map.get($variables, $name + '-800'), $button-opacity);
+    background: rgba(utils.get($variables, $name + '-800'), $button-opacity);
 
   }
 }
 
 @mixin sub-widths($number) {
-  min-width: string.unquote('#{$number}px');
-  width: string.unquote("#{$number}%");
-  max-width: string.unquote("#{$number}%");
+  min-width: utils.unquote('#{$number}px');
+  width: utils.unquote("#{$number}%");
+  max-width: utils.unquote("#{$number}%");
 }
 @mixin sub-heights($number) {
-  min-height: string.unquote('#{$number}px');
-  height: string.unquote("#{$number}%");
-  max-height: string.unquote("#{$number}%");
+  min-height: utils.unquote('#{$number}px');
+  height: utils.unquote("#{$number}%");
+  max-height: utils.unquote("#{$number}%");
 }
 
 // First define the list of color names
@@ -49,49 +48,49 @@ $shades: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900);
   @each $color in $color-variants {
     // Base color classes (using 500 shade)
     .#{$color} {
-      background-color: map.get($variables, $color);
+      background-color: utils.get($variables, $color);
     }
     // Default text variant (using 500 shade)
     .#{$color}-text {
-      color: map.get($variables, $color);
+      color: utils.get($variables, $color);
     }
 
     // Default border variant (using 500 shade)
     .#{$color}-border {
-      border: 1px solid map.get($variables, $color);
+      border: 1px solid utils.get($variables, $color);
     }
     .#{$color}-border-color {
-      border-color: map.get($variables, $color);
+      border-color: utils.get($variables, $color);
     }
 
     // Default hover state (using 700 shade)
     .#{$color}-hover:hover {
-      background-color: map.get($variables, "#{$color}-700");
+      background-color: utils.get($variables, "#{$color}-700");
     }
 
     // Generate classes for each shade
     @each $shade in $shades {
       // Background variants
       .#{$color}-#{$shade} {
-        background: map.get($variables, "#{$color}-#{$shade}");
+        background: utils.get($variables, "#{$color}-#{$shade}");
       }
 
       // Text variants
       .#{$color}-#{$shade}-text {
-        color: map.get($variables, "#{$color}-#{$shade}");
+        color: utils.get($variables, "#{$color}-#{$shade}");
       }
 
       // Border variants
       .#{$color}-#{$shade}-border {
-        border: 1px solid map.get($variables, "#{$color}-#{$shade}");
+        border: 1px solid utils.get($variables, "#{$color}-#{$shade}");
       }
       .#{$color}-#{$shade}-border-color {
-        border-color: map.get($variables, "#{$color}-#{$shade}");
+        border-color: utils.get($variables, "#{$color}-#{$shade}");
       }
 
       // Hover variants for each shade
       .#{$color}-#{$shade}-hover:hover {
-        background-color: map.get($variables, "#{$color}-#{if($shade < 900, $shade + 100, 900)}");
+        background-color: utils.get($variables, "#{$color}-#{if($shade < 900, $shade + 100, 900)}");
       }
     }
   }
@@ -123,8 +122,6 @@ body {
 // endregion
 
 // region Buttons
-
-/// region Buttons without an <i> inside
 button {
   color: $button-text;
   font-weight: bold;
@@ -133,6 +130,7 @@ button {
     transform: scale(1.05);
   }
 }
+/// region Buttons without an <i> inside
 button:not(:has(> i)) {
   cursor: pointer;
   background: rgba($button, $button-opacity);
@@ -153,10 +151,11 @@ button:not(:has(> i)) {
   }
 }
 /// endregion
+// endregion
 
 // region Containers
 @include generate-color-classes;
-
+// region Grid
 %grid-base {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min-width, 100px)), 1fr));
@@ -182,7 +181,9 @@ button:not(:has(> i)) {
     }
   }
 }
+// endregion
 
+// region Flex
 %flex-base {
   display: flex;
   align-items: center;
@@ -205,7 +206,9 @@ button:not(:has(> i)) {
     flex-direction: column;
   }
 }
+// endregion
 
+// region Other
 .container {
   background: $container;
   padding: $container-padding;
