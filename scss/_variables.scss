@@ -2,28 +2,45 @@
 
 
 // region Colors / Theme
+// region Dark
+$dark-50:  #a0a0aa !default;   // Lightest dark
+$dark-100: #8a8a93 !default;
+$dark-200: #75757d !default;
+$dark-300: #65656c !default;
+$dark-400: #55555b !default;
+$dark-500: #45454a !default;
+$dark-600: #35353a !default;
+$dark-700: #26262a !default;
+$dark-800: #1e1e20 !default;
+$dark-900: #0a0a0f !default;   // Main/darkest background
+$dark:     #0a0a0f !default;
+// endregion
+// region Light
+$light-50:  #ffffff !default;   // Lightest
+$light-100: #f7f7fa !default;
+$light-200: #ececf0 !default;
+$light-300: #e2e2e8 !default;
+$light-400: #d6d6de !default;
+$light-500: #c8c8d2 !default;
+$light-600: #bcbcc6 !default;
+$light-700: #b2b2bd !default;
+$light-800: #ababba !default;
+$light-900: #a0a0aa !default;   // Continues from $dark-50
+$light:     #ffffff !default;
+// endregion
 // region Primary: purplish-magenta tone
 /// Lightest shade of primary
-$primary-50:  #fdf4ff !default;
-/// Lighter than $primary-200
-$primary-100: #fae8ff !default;
-/// Lighter than $primary-300
-$primary-200: #f5d0fe !default;
-/// Lighter than $primary-400
-$primary-300: #f0abfc !default;
-/// Lighter than $primary-500
-$primary-400: #e879f9 !default;
-/// Base primary color (purplish-magenta)
-$primary-500: #d946ef !default;
-$primary: #d946ef !default;
-/// Darker than $primary-500
-$primary-600: #c026d3 !default;
-/// Darker than $primary-600
-$primary-700: #a21caf !default;
-/// Darker than $primary-700
-$primary-800: #86198f !default;
-/// Darkest shade of primary
-$primary-900: #701a75 !default;
+$primary-50: #f5f3ff;   // Lightest purple
+$primary-100: #ede9fe;
+$primary-200: #ddd6fe;
+$primary-300: #c4b5fd;
+$primary-400: #a78bfa;
+$primary-500: #8b5cf6;  // Main purple - more blueish than magenta
+$primary: #8b5cf6;  // Main purple - more blueish than magenta
+$primary-600: #7c3aed;
+$primary-700: #6d28d9;
+$primary-800: #5b21b6;
+$primary-900: #4c1d95;  // Darkest purple
 // endregion
 // region Secondary: more pink-ish version of primary
 /// Lightest shade of secondary
@@ -48,51 +65,34 @@ $secondary-800: #9d174d !default;
 /// Darkest shade of secondary
 $secondary-900: #831843 !default;
 // endregion
-// region Tertiary: more blue-ish version of primary
+// region Tertiary: Lime green
 /// Lightest shade of tertiary
-$tertiary-50:  #f5f3ff !default;
-/// Lighter than $tertiary-200
-$tertiary-100: #ede9fe !default;
-/// Lighter than $tertiary-300
-$tertiary-200: #ddd6fe !default;
-/// Lighter than $tertiary-400
-$tertiary-300: #c4b5fd !default;
-/// Lighter than $tertiary-500
-$tertiary-400: #a78bfa !default;
-/// Base tertiary color (bluish-purple)
-$tertiary-500: #8b5cf6 !default;
-$tertiary: #8b5cf6 !default;
-/// Darker than $tertiary-500
-$tertiary-600: #7c3aed !default;
-/// Darker than $tertiary-600
-$tertiary-700: #6d28d9 !default;
-/// Darker than $tertiary-700
-$tertiary-800: #5b21b6 !default;
-/// Darkest shade of tertiary
-$tertiary-900: #4c1d95 !default;
+$tertiary-50: #f7fee7;   // Lightest lime
+$tertiary-100: #ecfccb;
+$tertiary-200: #d9f99d;
+$tertiary-300: #bef264;
+$tertiary-400: #a3e635;
+$tertiary-500: #84cc16;  // Main lime
+$tertiary: #84cc16;  // Main lime
+$tertiary-600: #65a30d;
+$tertiary-700: #4d7c0f;
+$tertiary-800: #3f6212;
+$tertiary-900: #365314;  // Darkest lime
+
 // endregion
-// region Quaternary: more light blue-ish version of primary
+// region Quaternary: Electric blue
 /// Lightest shade of quaternary
-$quaternary-50:  #eff6ff !default;
-/// Lighter than $quaternary-200
-$quaternary-100: #dbeafe !default;
-/// Lighter than $quaternary-300
-$quaternary-200: #bfdbfe !default;
-/// Lighter than $quaternary-400
-$quaternary-300: #93c5fd !default;
-/// Lighter than $quaternary-500
-$quaternary-400: #60a5fa !default;
-/// Base quaternary color (light blue)
-$quaternary-500: #3b82f6 !default;
-$quaternary: #3b82f6 !default;
-/// Darker than $quaternary-500
-$quaternary-600: #2563eb !default;
-/// Darker than $quaternary-600
-$quaternary-700: #1d4ed8 !default;
-/// Darker than $quaternary-700
-$quaternary-800: #1e40af !default;
-/// Darkest shade of quaternary
-$quaternary-900: #1e3a8a !default;
+$quaternary-50: #f0f9ff;   // Lightest electric blue
+$quaternary-100: #e0f2fe;
+$quaternary-200: #bae6fd;
+$quaternary-300: #7dd3fc;
+$quaternary-400: #38bdf8;
+$quaternary-500: #0ea5e9;  // Main electric blue
+$quaternary: #0ea5e9;  // Main electric blue
+$quaternary-600: #0284c7;
+$quaternary-700: #0369a1;
+$quaternary-800: #075985;
+$quaternary-900: #0c4a6e;  // Darkest electric blue
 // endregion
 // region Red
 /// Lightest shade of red
@@ -237,25 +237,26 @@ $magenta-900: #701a75 !default;
 
 // region Backgrounds / Containers ~ Luuk Kablan: "$#!? light mode!"
 /// A light text color as light mode is bad
-$text: #d7dadf !default;
+$text: $light !default;
 /// A dark background color
-$background: #1a1a1f !default;
+$background: $dark !default;
 /// A bit lighter than $background for containers
-$container: #2a2a2f !default;
+$container: $dark-800 !default;
 /// A bit lighter than $container for cards
-$card: #3a3a3f !default;
+$card: $dark-700 !default;
 /// "far lighter" than $card for inputs
-$input: #6a6a6f !default;
+$input: $dark-600 !default;
 /// A very light color for placeholder text inside inputs
-$placeholder: #a0a0aa !default;
+$placeholder: $light-900 !default;
 /// A slightly darker that $container for buttons
-$button: #616060 !default;
+$button: $dark-500 !default;
+$button-hover: $dark-600 !default;
 // endregion
 
 
 // region Fonts
 /// Main font used across projects
-$font: 'Comic Sans', Tahoma, Geneva, sans-serif !default;
+$font: 'Open sans', Tahoma, Geneva, sans-serif !default;
 /// Font for code blocks
 $font-code: 'Courier New', Courier, monospace !default;
 /// Font for headings
@@ -276,8 +277,8 @@ $border-radius-small: 0.25rem !default;
 $border-radius: 0.5rem !default;
 $border-radius-large: 1rem !default;
 
-$button-text: #ffffff !default;
-$button-border: #605a5a !default;
+$button-text: $light-50 !default;
+$button-border: $light-600 !default;
 $button-opacity: 0.9 !default;
 
 $button-padding-small: 0.25rem 0.5rem !default;
@@ -286,11 +287,38 @@ $button-padding-large: 1rem 1.5rem !default;
 
 $container-padding: 1.5rem !default;
 $container-border-radius: $border-radius !default;
+
+$card-padding: 1rem !default;
+$card-border-radius: $border-radius !default;
 // endregion
 
 // region Dynamic variable map
 $variables: (
   // Colors
+        "dark": $dark,
+        "dark-50": $dark-50,
+        "dark-100": $dark-100,
+        "dark-200": $dark-200,
+        "dark-300": $dark-300,
+        "dark-400": $dark-400,
+        "dark-500": $dark-500,
+        "dark-600": $dark-600,
+        "dark-700": $dark-700,
+        "dark-800": $dark-800,
+        "dark-900": $dark-900,
+
+        "light": $light,
+        "light-50": $light-50,
+        "light-100": $light-100,
+        "light-200": $light-200,
+        "light-300": $light-300,
+        "light-400": $light-400,
+        "light-500": $light-500,
+        "light-600": $light-600,
+        "light-700": $light-700,
+        "light-800": $light-800,
+        "light-900": $light-900,
+
         "primary": $primary,
         "primary-50": $primary-50,
         "primary-100": $primary-100,
