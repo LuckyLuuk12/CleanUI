@@ -1,5 +1,6 @@
 {
-  "name": "clean-ui",
+  "author": "Luuk Kablan",
+  "name": "@kablan/clean-ui",
   "version": "1.0.0",
   "main": "scss/index.scss",
   "style": "css/index.css",
@@ -13,5 +14,10 @@
   "dependencies": {},
   "devDependencies": {
     "sass": "^1.75.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuckyLuuk12/CleanUI.git"
+  },
+  "keywords": ["scss", "css", "ui", "design-system"]
 }

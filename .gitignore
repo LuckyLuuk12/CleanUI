@@ -14,3 +14,5 @@ yarn-error.log*
 
 # Environment variables or secrets files (if any)
 .env
+
+*.tgz
