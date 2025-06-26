@@ -1,0 +1,17 @@
+{
+  "name": "clean-ui",
+  "version": "1.0.0",
+  "main": "scss/index.scss",
+  "style": "css/index.css",
+  "files": [
+    "scss",
+    "css"
+  ],
+  "scripts": {
+    "build": "sass scss/index.scss css/index.css --no-source-map"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.75.0"
+  }
+}
