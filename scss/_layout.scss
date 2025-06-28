@@ -1,0 +1,162 @@
+// Defaults for layout styles: header, nav, main, section, footer
+@use "variables" as *;
+@use "imports" as imports;
+@use "utils" as utils;
+
+// region Layout
+body {
+  display: flex;
+  flex-direction: column;
+  header {
+    position: relative;
+    display: flex;
+    //flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+    background: $container;
+    min-height: fit-content;
+    height: 5rem;
+    padding: 0 2rem;
+    box-shadow: 0 0.25rem 1rem rgba($primary,0.08);
+    margin-bottom: 1rem;
+
+    h1, img, .header {
+      display: flex;
+      align-items: center;
+      min-height: fit-content;
+      max-height: 3rem;
+      margin: 1rem;
+      font-family: $font-heading;
+      color: $primary;
+    }
+    a {
+      color: $text;
+      width: 100%;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+
+      &:hover {
+        background: $primary;
+      }
+    }
+    nav {
+      * {
+        border-radius: 0.25rem;
+      }
+      position: relative;
+      height: 2rem;
+      flex: 1;
+      // A div that contains navigation links on the right side
+      div.right {
+        position: absolute;
+        right: 0;
+        display: flex;
+        flex-direction: row;
+      }
+
+      // The first normal list of navigation links
+      ul {
+        top: 0.5rem;
+        width: 100%;
+        position: absolute;
+        list-style: none;
+        display: flex;
+        // A first-level dropdown menu
+        li {
+          ul {
+            position: relative;
+            display: none;
+            gap: 0.5rem;
+            background: $card;
+            justify-content: stretch;
+            // A next dropdown should be a grid spanning 1 column
+            li {
+              display: flex;
+              justify-content: stretch;
+              ul {
+                position: absolute;
+                top: 0;
+                left: 100%;
+                background: $card;
+              }
+            }
+          }
+          &:has(> ul) {
+            > a {
+              position: relative;
+              padding-right: 2rem;
+
+              &::after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                right: 0.5rem;
+                top: 50%;
+                width: 1.5rem;
+                height: 1.5rem;
+                background: url('data:image/svg+xml;utf8,<svg fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6"/></svg>') no-repeat center/contain;
+                transform: translateY(-50%) rotate(0deg);
+                transition: transform 0.2s;
+                pointer-events: none;
+              }
+            }
+
+            &:hover > a::after,
+            &:focus-within > a::after {
+              transform: translateY(-50%) rotate(180deg);
+            }
+          }
+        }
+
+        li {
+          // Show only the direct submenu on hover/focus
+          &:hover > ul,
+          &:focus-within > ul {
+            //display: grid;
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+
+    //nav ul li.has-dropdown > a {
+    //  position: relative;
+    //  padding-right: 2rem;
+    //
+    //  &::after {
+    //    content: '';
+    //    display: inline-block;
+    //    position: absolute;
+    //    right: 0.5rem;
+    //    top: 50%;
+    //    width: 1.5rem;
+    //    height: 1.5rem;
+    //    background: url('data:image/svg+xml;utf8,<svg fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6"/></svg>') no-repeat center/contain;
+    //    transform: translateY(-50%) rotate(0deg);
+    //    transition: transform 0.2s;
+    //    pointer-events: none;
+    //  }
+    //}
+    //
+    //nav ul li.has-dropdown {
+    //  &:hover > a::after, &:focus-within > a::after {
+    //    transform: translateY(-50%) rotate(180deg);
+    //  }
+    //}
+  }
+
+
+
+  main {
+    flex: 1;
+    section {
+      background: $container;
+    }
+  }
+  footer {
+    width: 100vw;
+  }
+}
+// endregion

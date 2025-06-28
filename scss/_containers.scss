@@ -88,6 +88,13 @@
   height: 100%;
   flex: 1;
 }
+.center {
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+}
 .w {
   $widths: 10, 25, 33, 50, 66, 75, 90, 100;
   @each $width in $widths {
