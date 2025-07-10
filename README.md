@@ -19,17 +19,26 @@ $primary: #ff00ff;
 ```
 
 ### CSS
-If you do not use SCSS, you can include the precompiled CSS directly in your HTML or via import.
+If you do not use SCSS, you can include the precompiled CSS directly in your HTML or via import by using the CDN
+from cloudflare:
 ```html
-<link rel="stylesheet" href="node_modules/@kablan/clean-ui/css/index.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/clean-ui/1.0.0/css/index.css">
 ```
 ```js
 import '@kablan/clean-ui/css/index.css';
 ```
 
+### Code Highlighting
+This package also includes a color theme for [Highlight.js](https://highlightjs.org/).
+To use it, make sure you import Highlight.js in your project as well, e.g.:
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<script> hljs.highlightAll(); </script>
+```
+
 <hr />
 
-* SCSS: Allows variable ovverides and tree-shaking via `@use`.
+* SCSS: Allows variable overrides and tree-shaking via `@use`.
 * CSS: Precompiled version for direct use without SCSS processing. Though, no variable overrides are possible.
 
 _See [_variables](scss/_variables.scss)_ for all available variables._

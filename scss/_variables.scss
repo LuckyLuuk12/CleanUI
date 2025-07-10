@@ -270,6 +270,11 @@ $font-size-huge: 2rem !default;
 
 
 // region Misc
+$small: 0.1rem !default;
+$medium: 0.25rem !default;
+$normal: 0.5rem !default;
+$large: 1rem !default;
+$huge: 1.5rem !default;
 $border-radius-tiny: 0.1rem !default;
 $border-radius-small: 0.25rem !default;
 $border-radius: 0.5rem !default;
@@ -279,9 +284,9 @@ $button-text: $light-50 !default;
 $button-border: $light-600 !default;
 $button-opacity: 0.9 !default;
 
-$button-padding-small: 0.25rem 0.5rem !default;
-$button-padding: 0.5rem 1rem !default;
-$button-padding-large: 1rem 1.5rem !default;
+$button-padding-small: $medium $normal !default;
+$button-padding: $normal $large !default;
+$button-padding-large: $large $huge !default;
 
 $container-padding: 1.5rem !default;
 $container-border-radius: $border-radius !default;

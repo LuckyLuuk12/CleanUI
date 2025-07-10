@@ -1,0 +1,131 @@
+@use "imports";
+@use "variables" as *;
+
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1rem 1.5rem;
+  border-radius: $border-radius-small;
+}
+code.hljs {
+  padding: $button-padding-small
+}
+/*!
+  Theme: Kablan CleanUI
+  Description: A dark theme for Highlight.js meant for projects on kablan.nl
+  Author: Luuk Kablan
+  Maintainer: @LuckyLuuk12
+  Updated: 2025-07-10
+
+  Copied from the GitHub Dark theme but colors adjusted to match the Kablan CleanUI style.
+*/
+.hljs {
+  color: $light;
+  background: linear-gradient(-45deg, rgba($dark-800, 0.6), rgba($dark-700, 0.6));
+  // Glass effect
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid $dark-600;
+  margin: 0.5rem 0.15rem;
+  cursor: text;
+  transition: all 0.3s ease;
+  &:hover {
+    border-color: $dark-500;
+  }
+}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: $red-400
+}
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: $primary-300
+}
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: $blue-400
+}
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: $blue-200
+}
+.hljs-built_in,
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: $yellow-600
+}
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: $light-400
+}
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: $green-400
+}
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: $light-400
+}
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: $blue-700;
+  font-weight: bold
+}
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: $yellow-400
+}
+.hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: $light-400;
+  font-style: italic
+}
+.hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: $light-400;
+  font-weight: bold
+}
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: $green-200;
+  background-color: $green-900;
+}
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: $red-200;
+  background-color: $red-900
+}
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+
+}

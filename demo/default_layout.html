@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Default layout</title>
+  
   <link rel="stylesheet" href="/css/index.css">
+  <!-- Highlight.js core JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <!-- Highlight.js GitHub Dark theme CSS -->
+  <script>hljs.highlightAll();</script>
 </head>
 <body>
   <header>
@@ -16,9 +21,10 @@
         <li><a href="/">Home</a></li>
         <li><a href="/">About</a></li>
         <li><a href="/">Contact</a></li>
+        <li><a href="/">Contact</a></li>
         <!-- Nested dropdown menu's -->
         <li>
-          <a href="#" class="hover">Click Dropdown 1</a>
+          <a href="#">Click Dropdown 1</a>
           <ul>
             <li><a href="#" class="">Sub 1</a></li>
             <li><a href="#">Sub 2</a></li>
@@ -40,7 +46,7 @@
                     </li>
                     <li><a href="#">Sub sub sub 4</a></li>
                     <li>
-                      <a href="#" class="click">Hover Dropdown 4</a>
+                      <a href="#">Hover Dropdown 4</a>
                       <ul>
                         <li><a href="#3">Final 3</a></li>
                         <li><a href="#4">Final 4</a></li>
@@ -52,21 +58,64 @@
             </li>
           </ul>
         </li>
-        <div class="right">
-          <li><a href="/login">Login</a></li>
-          <li><a href="/register">Register</a></li>
-        </div>
+        <li class="right">
+          <ul>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register" class="secondary tertiary-hover">Register</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </header>
   <main>
     <section>
-      <h2>Section Title</h2>
-      <p>Section content goes here.</p>
+      <h2>Default Styles</h2>
+      <p>
+        The CleanUI package is mainly a default styling set for my personal projects but in general offers
+        me the following benefits:
+        <ul>
+          <li>Consistent design across projects</li>
+          <li>Easy to maintain and update</li>
+          <li>Responsive design for various devices</li>
+          <li>Automatic page layout given a proper HTML structure</li>
+        </ul>
+        The default layout is designed to be simple and clean, providing a solid foundation for building web applications.
+        I hope it ensures I don't make that many more &quot;sketchy&quot; designs in the future. (e.g. using box shadows and gradients everywhere...)
+      </p>
     </section>
-    <section>
-      <h2>Another Section</h2>
-      <p>More content here.</p>
+    <section >
+      <h2>Default styles for proper HTML?</h2>
+      <div class="grid cols">
+        <div class="card grid-col">
+          A nice feature of the CleanUI package is that it provides default styles for common HTML elements.
+          So assume you have something like this in your HTML, no real usage of any of my classes at all, just a simple HTML structure:
+          <pre lang="html"><code>&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;My Example&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  &lt;main&gt;
+    &lt;h2&gt;Welcome to my example page&lt;/h2&gt;
+    &lt;p&gt;This is a simple example of how the CleanUI package can style your HTML elements.&lt;/p&gt;
+  &lt;/main&gt;
+&lt;/body&gt;</code></pre>
+        </div>
+        <div class="card grid-col">
+          Then if you successfully include the CleanUI package, it will automatically apply styles to these elements.
+          And by doing so, it produces a page similar to this one you're looking at without the actual text in the main content.
+          To also get full highlighting support in pre-code blocks you have to include this in your HTML's head:
+          <pre lang="html"><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/index.css&quot;&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt; hljs.highlightAll(); &lt;/script&gt;</code></pre>
+        
+        </div>
+      </div>
     </section>
   </main>
   <footer>

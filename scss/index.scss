@@ -5,6 +5,8 @@
 @use 'interactable' as *;
 @use 'containers' as *;
 @use 'layout' as *;
+@use "highlight" as *;
+//@import '~highlight.js/styles/github-dark.css';
 
 // region Core page styling
 * {
