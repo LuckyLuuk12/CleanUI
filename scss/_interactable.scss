@@ -1,6 +1,5 @@
-@use 'imports' as imports;
-@use 'utils' as utils;
 @use 'variables' as *;
+@use 'utils' as *;
 // region Input, Button, and Link Styles
 
 /// region Buttons
@@ -8,7 +7,7 @@ button {
   text-align: center;
   color: $button-text;
   font-weight: bold;
-  @include utils.transition(all);
+  @include transition(all);
   &:hover {
     transform: scale(1.05);
   }
@@ -24,7 +23,7 @@ button:not(:has(> i)) {
   $color-variants: 'primary', 'secondary', 'tertiary', 'quaternary', 'red', 'green', 'blue', 'cyan', 'yellow', 'magenta';
   @each $variant in $color-variants {
     &.#{$variant} {
-      @include utils.colored-button($variant);
+      @include colored-button($variant);
     }
   }
   &.small {
@@ -42,7 +41,7 @@ button:not(:has(> i)) {
 
 /// region Links
 a {
-  @include utils.generate-a-gradient-variants;
+  @include generate-a-gradient-variants;
 }
 /// endregion
 

@@ -1,9 +1,20 @@
 {
   "author": "Luuk Kablan",
   "name": "@kablan/clean-ui",
-  "version": "1.0.0",
-  "main": "scss/index.scss",
+  "version": "1.0.6",
+  "main": "css/index.css",
   "style": "css/index.css",
+  "exports": {
+    ".": {
+      "sass": "./scss/index.scss",
+      "style": "./css/index.css",
+      "default": "./css/index.css"
+    },
+    "./scss": "./scss/index.scss",
+    "./scss/*": "./scss/*",
+    "./css": "./css/index.css",
+    "./css/*": "./css/*"
+  },
   "files": [
     "scss",
     "css"
@@ -11,14 +22,18 @@
   "scripts": {
     "build": "sass scss/index.scss css/index.css --no-source-map"
   },
-  "dependencies": {},
   "devDependencies": {
-    "sass": "^1.75.0",
-    "highlight.js": "^11.11.1"
+    "highlight.js": "^11.11.1",
+    "sass": "^1.75.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LuckyLuuk12/CleanUI.git"
   },
-  "keywords": ["scss", "css", "ui", "design-system"]
+  "keywords": [
+    "scss",
+    "css",
+    "ui",
+    "design-system"
+  ]
 }

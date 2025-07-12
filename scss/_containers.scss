@@ -1,9 +1,8 @@
-@use 'imports' as imports;
-@use 'utils' as utils;
 @use 'variables' as *;
+@use 'utils' as *;
 
 // region Containers
-@include utils.generate-color-classes;
+@include generate-color-classes;
 // region Grid
 %grid-base {
   display: grid;
@@ -38,7 +37,7 @@
 
 }
 
-@include utils.generate-grid-gen-classes((1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+@include generate-grid-gen-classes((1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
 
 // endregion
 
@@ -99,7 +98,7 @@
   $widths: 10, 25, 33, 50, 66, 75, 90, 100;
   @each $width in $widths {
     &#{$width} {
-      @include utils.sub-widths($width);
+      @include sub-widths($width);
     }
   }
 }
@@ -107,7 +106,7 @@
   $heights: 10, 20, 25, 33, 50, 66, 75, 80, 90, 100;
   @each $height in $heights {
     &#{$height} {
-      @include utils.sub-heights($height);
+      @include sub-heights($height);
     }
   }
 }

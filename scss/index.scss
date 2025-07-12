@@ -1,12 +1,9 @@
-
-@use 'imports' as imports;
-@use 'utils' as utils;
 @use 'variables' as *;
+@use 'utils' as utils;
 @use 'interactable' as *;
 @use 'containers' as *;
 @use 'layout' as *;
-@use "highlight" as *;
-//@import '~highlight.js/styles/github-dark.css';
+@use 'highlight' as *;
 
 // region Core page styling
 * {

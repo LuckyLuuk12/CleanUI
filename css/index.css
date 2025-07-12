@@ -1,6 +1,3 @@
-/* Then in your other files, and use e.g. utils.get() instead of map.get()
- *  @use './utils' as utils;
- */
 button {
   text-align: center;
   color: #ffffff;

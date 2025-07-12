@@ -14,8 +14,15 @@ You can optionally override the default variables in `/scss/_variables.scss` bef
 // Optionally override default variables from /scss/_variables.scss
 $primary: #ff00ff;
 
-// Import the CleanUI styles
-@use "@kablan/clean-ui/scss/index" as *;
+// Import the CleanUI styles and partials
+@use '@kablan/clean-ui/scss/_imports.scss' as imports;
+@use '@kablan/clean-ui/scss/_utils.scss' as utils;
+@use '@kablan/clean-ui/scss/_variables.scss' as *;
+@use '@kablan/clean-ui/scss/_interactable.scss' as *;
+@use '@kablan/clean-ui/scss/_containers.scss' as *;
+@use '@kablan/clean-ui/scss/_layout.scss' as *;
+@use '@kablan/clean-ui/scss/_highlight.scss' as *;
+@use '@kablan/clean-ui/scss/index.scss' as *;
 ```
 
 ### CSS

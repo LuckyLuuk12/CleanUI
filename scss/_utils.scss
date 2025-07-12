@@ -1,4 +1,5 @@
-@use "imports" as imports;
+@use "sass:map" as map;
+@use "sass:string" as string;
 @use "variables" as *;
 
 // Mixin for smooth hover transitions
@@ -7,25 +8,25 @@
 }
 
 @mixin colored-button($name) {
-  background: rgba(imports.get($variables, $name + '-500'), $button-opacity);
+  background: rgba(map.get($variables, $name + '-500'), $button-opacity);
   backdrop-filter: blur(24px);
-  border: 2px solid imports.get($variables, $name + '-900');
+  border: 2px solid map.get($variables, $name + '-900');
 
   &:hover {
-    background: rgba(imports.get($variables, $name + '-800'), $button-opacity);
+    background: rgba(map.get($variables, $name + '-800'), $button-opacity);
 
   }
 }
 
 @mixin sub-widths($number) {
-  min-width: imports.unquote('#{$number}px');
-  width: imports.unquote("#{$number}%");
-  //max-width: imports.unquote("#{$number}%");
+  min-width: string.unquote('#{$number}px');
+  width: string.unquote("#{$number}%");
+  //max-width: map.unquote("#{$number}%");
 }
 @mixin sub-heights($number) {
-  min-height: imports.unquote('#{$number}px');
-  height: imports.unquote("#{$number}%");
-  //max-height: imports.unquote("#{$number}%");
+  min-height: string.unquote('#{$number}px');
+  height: string.unquote("#{$number}%");
+  //max-height: map.unquote("#{$number}%");
 }
 
 @mixin generate-grid-gen-classes($sizes) {
@@ -69,56 +70,56 @@ $shades: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900);
   @each $color in $color-variants {
     // Base color classes (using 500 shade)
     .#{$color} {
-      background-color: imports.get($variables, $color);
+      background-color: map.get($variables, $color);
     }
     // Default text variant (using 500 shade)
     .#{$color}-text {
-      color: imports.get($variables, $color);
+      color: map.get($variables, $color);
     }
     .#{$color}-text-border {
       text-shadow:
-              -1px -1px 0 imports.get($variables, $color),
-              1px -1px 0 imports.get($variables, $color),
-              -1px  1px 0 imports.get($variables, $color),
-              1px  1px 0 imports.get($variables, $color);
+              -1px -1px 0 map.get($variables, $color),
+              1px -1px 0 map.get($variables, $color),
+              -1px  1px 0 map.get($variables, $color),
+              1px  1px 0 map.get($variables, $color);
     }
 
     // Default border variant (using 500 shade)
     .#{$color}-border {
-      border: 1px solid imports.get($variables, $color);
+      border: 1px solid map.get($variables, $color);
     }
     .#{$color}-border-color {
-      border-color: imports.get($variables, $color);
+      border-color: map.get($variables, $color);
     }
 
     // Default hover state (using 700 shade)
     .#{$color}-hover:hover {
-      background-color: imports.get($variables, "#{$color}-700");
+      background-color: map.get($variables, "#{$color}-700");
     }
 
     // Generate classes for each shade
     @each $shade in $shades {
       // Background variants
       .#{$color}-#{$shade} {
-        background: imports.get($variables, "#{$color}-#{$shade}");
+        background: map.get($variables, "#{$color}-#{$shade}");
       }
 
       // Text variants
       .#{$color}-#{$shade}-text {
-        color: imports.get($variables, "#{$color}-#{$shade}");
+        color: map.get($variables, "#{$color}-#{$shade}");
       }
 
       // Border variants
       .#{$color}-#{$shade}-border {
-        border: 1px solid imports.get($variables, "#{$color}-#{$shade}");
+        border: 1px solid map.get($variables, "#{$color}-#{$shade}");
       }
       .#{$color}-#{$shade}-border-color {
-        border-color: imports.get($variables, "#{$color}-#{$shade}");
+        border-color: map.get($variables, "#{$color}-#{$shade}");
       }
 
       // Hover variants for each shade
       .#{$color}-#{$shade}-hover:hover {
-        background-color: imports.get($variables, "#{$color}-#{if($shade < 900, $shade + 100, 900)}");
+        background-color: map.get($variables, "#{$color}-#{if($shade < 900, $shade + 100, 900)}");
       }
     }
   }
@@ -129,7 +130,7 @@ $shades: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900);
     @each $c2 in $color-variants {
       // 2-color mirrored gradient
       &.gradient-#{$c1}-#{$c2} {
-        background: linear-gradient(90deg, imports.get($variables, $c1), imports.get($variables, $c2), imports.get($variables, $c1));
+        background: linear-gradient(90deg, map.get($variables, $c1), map.get($variables, $c2), map.get($variables, $c1));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -144,7 +145,7 @@ $shades: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900);
           bottom: -2px;
           width: 100%;
           height: 3px;
-          background: linear-gradient(90deg, imports.get($variables, $c1), imports.get($variables, $c2), imports.get($variables, $c1));
+          background: linear-gradient(90deg, map.get($variables, $c1), map.get($variables, $c2), map.get($variables, $c1));
           transform: translateX(-50%) scaleX(0.2);
           transform-origin: center;
           transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -159,7 +160,7 @@ $shades: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900);
       @each $c3 in $color-variants {
         // 3-color mirrored gradient
         &.gradient-#{$c1}-#{$c2}-#{$c3} {
-          background: linear-gradient(90deg, imports.get($variables, $c1), imports.get($variables, $c2), imports.get($variables, $c3), imports.get($variables, $c2), imports.get($variables, $c1));
+          background: linear-gradient(90deg, map.get($variables, $c1), map.get($variables, $c2), map.get($variables, $c3), map.get($variables, $c2), map.get($variables, $c1));
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -174,7 +175,7 @@ $shades: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900);
             bottom: -2px;
             width: 100%;
             height: 3px;
-            background: linear-gradient(90deg, imports.get($variables, $c1), imports.get($variables, $c2), imports.get($variables, $c3), imports.get($variables, $c2), imports.get($variables, $c1));
+            background: linear-gradient(90deg, map.get($variables, $c1), map.get($variables, $c2), map.get($variables, $c3), map.get($variables, $c2), map.get($variables, $c1));
             transform: translateX(-50%) scaleX(0.2);
             transform-origin: center;
             transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
