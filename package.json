@@ -1,7 +1,7 @@
 {
   "author": "Luuk Kablan",
   "name": "@kablan/clean-ui",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "css/index.css",
   "style": "css/index.css",
   "exports": {

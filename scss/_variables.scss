@@ -1,5 +1,6 @@
-// region Variables
+@use "sass:map" as map;
 
+// region Variables
 $variables: (
   // Colors
   "dark": #0a0a0f,
@@ -176,200 +177,200 @@ $variables: (
 );
 
 // region Colors / Theme
-$dark: map-get($variables, "dark") !default;
-$dark-50: map-get($variables, "dark-50") !default;
-$dark-100: map-get($variables, "dark-100") !default;
-$dark-200: map-get($variables, "dark-200") !default;
-$dark-300: map-get($variables, "dark-300") !default;
-$dark-400: map-get($variables, "dark-400") !default;
-$dark-500: map-get($variables, "dark-500") !default;
-$dark-600: map-get($variables, "dark-600") !default;
-$dark-700: map-get($variables, "dark-700") !default;
-$dark-800: map-get($variables, "dark-800") !default;
-$dark-900: map-get($variables, "dark-900") !default;
-$light: map-get($variables, "light") !default;
-$light-50: map-get($variables, "light-50") !default;
-$light-100: map-get($variables, "light-100") !default;
-$light-200: map-get($variables, "light-200") !default;
-$light-300: map-get($variables, "light-300") !default;
-$light-400: map-get($variables, "light-400") !default;
-$light-500: map-get($variables, "light-500") !default;
-$light-600: map-get($variables, "light-600") !default;
-$light-700: map-get($variables, "light-700") !default;
-$light-800: map-get($variables, "light-800") !default;
-$light-900: map-get($variables, "light-900") !default;
-$primary: map-get($variables, "primary") !default;
-$primary-50: map-get($variables, "primary-50") !default;
-$primary-100: map-get($variables, "primary-100") !default;
-$primary-200: map-get($variables, "primary-200") !default;
-$primary-300: map-get($variables, "primary-300") !default;
-$primary-400: map-get($variables, "primary-400") !default;
-$primary-500: map-get($variables, "primary-500") !default;
-$primary-600: map-get($variables, "primary-600") !default;
-$primary-700: map-get($variables, "primary-700") !default;
-$primary-800: map-get($variables, "primary-800") !default;
-$primary-900: map-get($variables, "primary-900") !default;
-$secondary: map-get($variables, "secondary") !default;
-$secondary-50: map-get($variables, "secondary-50") !default;
-$secondary-100: map-get($variables, "secondary-100") !default;
-$secondary-200: map-get($variables, "secondary-200") !default;
-$secondary-300: map-get($variables, "secondary-300") !default;
-$secondary-400: map-get($variables, "secondary-400") !default;
-$secondary-500: map-get($variables, "secondary-500") !default;
-$secondary-600: map-get($variables, "secondary-600") !default;
-$secondary-700: map-get($variables, "secondary-700") !default;
-$secondary-800: map-get($variables, "secondary-800") !default;
-$secondary-900: map-get($variables, "secondary-900") !default;
-$tertiary: map-get($variables, "tertiary") !default;
-$tertiary-50: map-get($variables, "tertiary-50") !default;
-$tertiary-100: map-get($variables, "tertiary-100") !default;
-$tertiary-200: map-get($variables, "tertiary-200") !default;
-$tertiary-300: map-get($variables, "tertiary-300") !default;
-$tertiary-400: map-get($variables, "tertiary-400") !default;
-$tertiary-500: map-get($variables, "tertiary-500") !default;
-$tertiary-600: map-get($variables, "tertiary-600") !default;
-$tertiary-700: map-get($variables, "tertiary-700") !default;
-$tertiary-800: map-get($variables, "tertiary-800") !default;
-$tertiary-900: map-get($variables, "tertiary-900") !default;
-$quaternary: map-get($variables, "quaternary") !default;
-$quaternary-50: map-get($variables, "quaternary-50") !default;
-$quaternary-100: map-get($variables, "quaternary-100") !default;
-$quaternary-200: map-get($variables, "quaternary-200") !default;
-$quaternary-300: map-get($variables, "quaternary-300") !default;
-$quaternary-400: map-get($variables, "quaternary-400") !default;
-$quaternary-500: map-get($variables, "quaternary-500") !default;
-$quaternary-600: map-get($variables, "quaternary-600") !default;
-$quaternary-700: map-get($variables, "quaternary-700") !default;
-$quaternary-800: map-get($variables, "quaternary-800") !default;
-$quaternary-900: map-get($variables, "quaternary-900") !default;
-$red: map-get($variables, "red") !default;
-$red-50: map-get($variables, "red-50") !default;
-$red-100: map-get($variables, "red-100") !default;
-$red-200: map-get($variables, "red-200") !default;
-$red-300: map-get($variables, "red-300") !default;
-$red-400: map-get($variables, "red-400") !default;
-$red-500: map-get($variables, "red-500") !default;
-$red-600: map-get($variables, "red-600") !default;
-$red-700: map-get($variables, "red-700") !default;
-$red-800: map-get($variables, "red-800") !default;
-$red-900: map-get($variables, "red-900") !default;
-$green: map-get($variables, "green") !default;
-$green-50: map-get($variables, "green-50") !default;
-$green-100: map-get($variables, "green-100") !default;
-$green-200: map-get($variables, "green-200") !default;
-$green-300: map-get($variables, "green-300") !default;
-$green-400: map-get($variables, "green-400") !default;
-$green-500: map-get($variables, "green-500") !default;
-$green-600: map-get($variables, "green-600") !default;
-$green-700: map-get($variables, "green-700") !default;
-$green-800: map-get($variables, "green-800") !default;
-$green-900: map-get($variables, "green-900") !default;
-$blue: map-get($variables, "blue") !default;
-$blue-50: map-get($variables, "blue-50") !default;
-$blue-100: map-get($variables, "blue-100") !default;
-$blue-200: map-get($variables, "blue-200") !default;
-$blue-300: map-get($variables, "blue-300") !default;
-$blue-400: map-get($variables, "blue-400") !default;
-$blue-500: map-get($variables, "blue-500") !default;
-$blue-600: map-get($variables, "blue-600") !default;
-$blue-700: map-get($variables, "blue-700") !default;
-$blue-800: map-get($variables, "blue-800") !default;
-$blue-900: map-get($variables, "blue-900") !default;
-$cyan: map-get($variables, "cyan") !default;
-$cyan-50: map-get($variables, "cyan-50") !default;
-$cyan-100: map-get($variables, "cyan-100") !default;
-$cyan-200: map-get($variables, "cyan-200") !default;
-$cyan-300: map-get($variables, "cyan-300") !default;
-$cyan-400: map-get($variables, "cyan-400") !default;
-$cyan-500: map-get($variables, "cyan-500") !default;
-$cyan-600: map-get($variables, "cyan-600") !default;
-$cyan-700: map-get($variables, "cyan-700") !default;
-$cyan-800: map-get($variables, "cyan-800") !default;
-$cyan-900: map-get($variables, "cyan-900") !default;
-$yellow: map-get($variables, "yellow") !default;
-$yellow-50: map-get($variables, "yellow-50") !default;
-$yellow-100: map-get($variables, "yellow-100") !default;
-$yellow-200: map-get($variables, "yellow-200") !default;
-$yellow-300: map-get($variables, "yellow-300") !default;
-$yellow-400: map-get($variables, "yellow-400") !default;
-$yellow-500: map-get($variables, "yellow-500") !default;
-$yellow-600: map-get($variables, "yellow-600") !default;
-$yellow-700: map-get($variables, "yellow-700") !default;
-$yellow-800: map-get($variables, "yellow-800") !default;
-$yellow-900: map-get($variables, "yellow-900") !default;
-$magenta: map-get($variables, "magenta") !default;
-$magenta-50: map-get($variables, "magenta-50") !default;
-$magenta-100: map-get($variables, "magenta-100") !default;
-$magenta-200: map-get($variables, "magenta-200") !default;
-$magenta-300: map-get($variables, "magenta-300") !default;
-$magenta-400: map-get($variables, "magenta-400") !default;
-$magenta-500: map-get($variables, "magenta-500") !default;
-$magenta-600: map-get($variables, "magenta-600") !default;
-$magenta-700: map-get($variables, "magenta-700") !default;
-$magenta-800: map-get($variables, "magenta-800") !default;
-$magenta-900: map-get($variables, "magenta-900") !default;
+$dark: map.get($variables, "dark") !default;
+$dark-50: map.get($variables, "dark-50") !default;
+$dark-100: map.get($variables, "dark-100") !default;
+$dark-200: map.get($variables, "dark-200") !default;
+$dark-300: map.get($variables, "dark-300") !default;
+$dark-400: map.get($variables, "dark-400") !default;
+$dark-500: map.get($variables, "dark-500") !default;
+$dark-600: map.get($variables, "dark-600") !default;
+$dark-700: map.get($variables, "dark-700") !default;
+$dark-800: map.get($variables, "dark-800") !default;
+$dark-900: map.get($variables, "dark-900") !default;
+$light: map.get($variables, "light") !default;
+$light-50: map.get($variables, "light-50") !default;
+$light-100: map.get($variables, "light-100") !default;
+$light-200: map.get($variables, "light-200") !default;
+$light-300: map.get($variables, "light-300") !default;
+$light-400: map.get($variables, "light-400") !default;
+$light-500: map.get($variables, "light-500") !default;
+$light-600: map.get($variables, "light-600") !default;
+$light-700: map.get($variables, "light-700") !default;
+$light-800: map.get($variables, "light-800") !default;
+$light-900: map.get($variables, "light-900") !default;
+$primary: map.get($variables, "primary") !default;
+$primary-50: map.get($variables, "primary-50") !default;
+$primary-100: map.get($variables, "primary-100") !default;
+$primary-200: map.get($variables, "primary-200") !default;
+$primary-300: map.get($variables, "primary-300") !default;
+$primary-400: map.get($variables, "primary-400") !default;
+$primary-500: map.get($variables, "primary-500") !default;
+$primary-600: map.get($variables, "primary-600") !default;
+$primary-700: map.get($variables, "primary-700") !default;
+$primary-800: map.get($variables, "primary-800") !default;
+$primary-900: map.get($variables, "primary-900") !default;
+$secondary: map.get($variables, "secondary") !default;
+$secondary-50: map.get($variables, "secondary-50") !default;
+$secondary-100: map.get($variables, "secondary-100") !default;
+$secondary-200: map.get($variables, "secondary-200") !default;
+$secondary-300: map.get($variables, "secondary-300") !default;
+$secondary-400: map.get($variables, "secondary-400") !default;
+$secondary-500: map.get($variables, "secondary-500") !default;
+$secondary-600: map.get($variables, "secondary-600") !default;
+$secondary-700: map.get($variables, "secondary-700") !default;
+$secondary-800: map.get($variables, "secondary-800") !default;
+$secondary-900: map.get($variables, "secondary-900") !default;
+$tertiary: map.get($variables, "tertiary") !default;
+$tertiary-50: map.get($variables, "tertiary-50") !default;
+$tertiary-100: map.get($variables, "tertiary-100") !default;
+$tertiary-200: map.get($variables, "tertiary-200") !default;
+$tertiary-300: map.get($variables, "tertiary-300") !default;
+$tertiary-400: map.get($variables, "tertiary-400") !default;
+$tertiary-500: map.get($variables, "tertiary-500") !default;
+$tertiary-600: map.get($variables, "tertiary-600") !default;
+$tertiary-700: map.get($variables, "tertiary-700") !default;
+$tertiary-800: map.get($variables, "tertiary-800") !default;
+$tertiary-900: map.get($variables, "tertiary-900") !default;
+$quaternary: map.get($variables, "quaternary") !default;
+$quaternary-50: map.get($variables, "quaternary-50") !default;
+$quaternary-100: map.get($variables, "quaternary-100") !default;
+$quaternary-200: map.get($variables, "quaternary-200") !default;
+$quaternary-300: map.get($variables, "quaternary-300") !default;
+$quaternary-400: map.get($variables, "quaternary-400") !default;
+$quaternary-500: map.get($variables, "quaternary-500") !default;
+$quaternary-600: map.get($variables, "quaternary-600") !default;
+$quaternary-700: map.get($variables, "quaternary-700") !default;
+$quaternary-800: map.get($variables, "quaternary-800") !default;
+$quaternary-900: map.get($variables, "quaternary-900") !default;
+$red: map.get($variables, "red") !default;
+$red-50: map.get($variables, "red-50") !default;
+$red-100: map.get($variables, "red-100") !default;
+$red-200: map.get($variables, "red-200") !default;
+$red-300: map.get($variables, "red-300") !default;
+$red-400: map.get($variables, "red-400") !default;
+$red-500: map.get($variables, "red-500") !default;
+$red-600: map.get($variables, "red-600") !default;
+$red-700: map.get($variables, "red-700") !default;
+$red-800: map.get($variables, "red-800") !default;
+$red-900: map.get($variables, "red-900") !default;
+$green: map.get($variables, "green") !default;
+$green-50: map.get($variables, "green-50") !default;
+$green-100: map.get($variables, "green-100") !default;
+$green-200: map.get($variables, "green-200") !default;
+$green-300: map.get($variables, "green-300") !default;
+$green-400: map.get($variables, "green-400") !default;
+$green-500: map.get($variables, "green-500") !default;
+$green-600: map.get($variables, "green-600") !default;
+$green-700: map.get($variables, "green-700") !default;
+$green-800: map.get($variables, "green-800") !default;
+$green-900: map.get($variables, "green-900") !default;
+$blue: map.get($variables, "blue") !default;
+$blue-50: map.get($variables, "blue-50") !default;
+$blue-100: map.get($variables, "blue-100") !default;
+$blue-200: map.get($variables, "blue-200") !default;
+$blue-300: map.get($variables, "blue-300") !default;
+$blue-400: map.get($variables, "blue-400") !default;
+$blue-500: map.get($variables, "blue-500") !default;
+$blue-600: map.get($variables, "blue-600") !default;
+$blue-700: map.get($variables, "blue-700") !default;
+$blue-800: map.get($variables, "blue-800") !default;
+$blue-900: map.get($variables, "blue-900") !default;
+$cyan: map.get($variables, "cyan") !default;
+$cyan-50: map.get($variables, "cyan-50") !default;
+$cyan-100: map.get($variables, "cyan-100") !default;
+$cyan-200: map.get($variables, "cyan-200") !default;
+$cyan-300: map.get($variables, "cyan-300") !default;
+$cyan-400: map.get($variables, "cyan-400") !default;
+$cyan-500: map.get($variables, "cyan-500") !default;
+$cyan-600: map.get($variables, "cyan-600") !default;
+$cyan-700: map.get($variables, "cyan-700") !default;
+$cyan-800: map.get($variables, "cyan-800") !default;
+$cyan-900: map.get($variables, "cyan-900") !default;
+$yellow: map.get($variables, "yellow") !default;
+$yellow-50: map.get($variables, "yellow-50") !default;
+$yellow-100: map.get($variables, "yellow-100") !default;
+$yellow-200: map.get($variables, "yellow-200") !default;
+$yellow-300: map.get($variables, "yellow-300") !default;
+$yellow-400: map.get($variables, "yellow-400") !default;
+$yellow-500: map.get($variables, "yellow-500") !default;
+$yellow-600: map.get($variables, "yellow-600") !default;
+$yellow-700: map.get($variables, "yellow-700") !default;
+$yellow-800: map.get($variables, "yellow-800") !default;
+$yellow-900: map.get($variables, "yellow-900") !default;
+$magenta: map.get($variables, "magenta") !default;
+$magenta-50: map.get($variables, "magenta-50") !default;
+$magenta-100: map.get($variables, "magenta-100") !default;
+$magenta-200: map.get($variables, "magenta-200") !default;
+$magenta-300: map.get($variables, "magenta-300") !default;
+$magenta-400: map.get($variables, "magenta-400") !default;
+$magenta-500: map.get($variables, "magenta-500") !default;
+$magenta-600: map.get($variables, "magenta-600") !default;
+$magenta-700: map.get($variables, "magenta-700") !default;
+$magenta-800: map.get($variables, "magenta-800") !default;
+$magenta-900: map.get($variables, "magenta-900") !default;
 // endregion
 
 
 // region Backgrounds / Containers ~ Luuk Kablan: "$#!? light mode!"
 /// A light text color as light mode is bad
-$text: map-get($variables, "text") !default;
+$text: map.get($variables, "text") !default;
 /// A dark background color
-$background: map-get($variables, "background") !default;
+$background: map.get($variables, "background") !default;
 /// A bit lighter than $background for containers
-$container: map-get($variables, "container") !default;
+$container: map.get($variables, "container") !default;
 /// A bit lighter than $container for cards
-$card: map-get($variables, "card") !default;
+$card: map.get($variables, "card") !default;
 /// "far lighter" than $card for inputs
-$input: map-get($variables, "input") !default;
+$input: map.get($variables, "input") !default;
 /// A very light color for placeholder text inside inputs
-$placeholder: map-get($variables, "placeholder") !default;
+$placeholder: map.get($variables, "placeholder") !default;
 /// A slightly darker that $container for buttons
-$button: map-get($variables, "button") !default;
-$button-hover: map-get($variables, "button-hover") !default;
+$button: map.get($variables, "button") !default;
+$button-hover: map.get($variables, "button-hover") !default;
 // endregion
 
 
 // region Fonts
 /// Main font used across projects
-$font: map-get($variables, "font") !default;
+$font: map.get($variables, "font") !default;
 /// Font for code blocks
-$font-code: map-get($variables, "font-code") !default;
+$font-code: map.get($variables, "font-code") !default;
 /// Font for headings
-$font-heading: map-get($variables, "font-heading") !default;
+$font-heading: map.get($variables, "font-heading") !default;
 /// A "fancy" curly written font, can be used for titles or special text
-$font-fancy: map-get($variables, "font-fancy") !default;
-$font-size-tiny: map-get($variables, "font-size-tiny") !default;
-$font-size-small: map-get($variables, "font-size-small") !default;
-$font-size: map-get($variables, "font-size") !default;
-$font-size-large: map-get($variables, "font-size-large") !default;
-$font-size-huge: map-get($variables, "font-size-huge") !default;
+$font-fancy: map.get($variables, "font-fancy") !default;
+$font-size-tiny: map.get($variables, "font-size-tiny") !default;
+$font-size-small: map.get($variables, "font-size-small") !default;
+$font-size: map.get($variables, "font-size") !default;
+$font-size-large: map.get($variables, "font-size-large") !default;
+$font-size-huge: map.get($variables, "font-size-huge") !default;
 // endregion
 
 
 // region Misc
-$small: map-get($variables, "small") !default;
-$medium: map-get($variables, "medium") !default;
-$normal: map-get($variables, "normal") !default;
-$large: map-get($variables, "large") !default;
-$huge: map-get($variables, "huge") !default;
-$border-radius-tiny: map-get($variables, "border-radius-tiny") !default;
-$border-radius-small: map-get($variables, "border-radius-small") !default;
-$border-radius: map-get($variables, "border-radius") !default;
-$border-radius-large: map-get($variables, "border-radius-large") !default;
-$button-text: map-get($variables, "button-text") !default;
-$button-border: map-get($variables, "button-border") !default;
-$button-opacity: map-get($variables, "button-opacity") !default;
+$small: map.get($variables, "small") !default;
+$medium: map.get($variables, "medium") !default;
+$normal: map.get($variables, "normal") !default;
+$large: map.get($variables, "large") !default;
+$huge: map.get($variables, "huge") !default;
+$border-radius-tiny: map.get($variables, "border-radius-tiny") !default;
+$border-radius-small: map.get($variables, "border-radius-small") !default;
+$border-radius: map.get($variables, "border-radius") !default;
+$border-radius-large: map.get($variables, "border-radius-large") !default;
+$button-text: map.get($variables, "button-text") !default;
+$button-border: map.get($variables, "button-border") !default;
+$button-opacity: map.get($variables, "button-opacity") !default;
 
-$button-padding-small: map-get($variables, "button-padding-small") !default;
-$button-padding: map-get($variables, "button-padding") !default;
-$button-padding-large: map-get($variables, "button-padding-large") !default;
+$button-padding-small: map.get($variables, "button-padding-small") !default;
+$button-padding: map.get($variables, "button-padding") !default;
+$button-padding-large: map.get($variables, "button-padding-large") !default;
 
-$container-padding: map-get($variables, "container-padding") !default;
-$container-border-radius: map-get($variables, "container-border-radius") !default;
+$container-padding: map.get($variables, "container-padding") !default;
+$container-border-radius: map.get($variables, "container-border-radius") !default;
 
-$card-padding: map-get($variables, "card-padding") !default;
-$card-border-radius: map-get($variables, "card-border-radius") !default;
+$card-padding: map.get($variables, "card-padding") !default;
+$card-border-radius: map.get($variables, "card-border-radius") !default;
 // endregion
 
 // endregion
