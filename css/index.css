@@ -48979,6 +48979,259 @@ input[type=submit]:active, button[type=submit]:active {
   transform: scale(0.95);
 }
 
+.button-hollow.dark,
+input[type=button].hollow.dark,
+button.hollow.dark {
+  background: linear-gradient(135deg, rgba(10, 10, 15, 0.2) 0%, rgba(10, 10, 15, 0.05) 100%);
+  color: #0a0a0f;
+  border: 1px solid #0a0a0f;
+  border-radius: 0.5rem;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 600;
+  cursor: pointer;
+}
+.button-hollow.dark:hover, .button-hollow.dark:focus,
+input[type=button].hollow.dark:hover,
+input[type=button].hollow.dark:focus,
+button.hollow.dark:hover,
+button.hollow.dark:focus {
+  background: linear-gradient(135deg, rgba(10, 10, 15, 0.3) 0%, rgba(10, 10, 15, 0.1) 100%);
+  color: #0a0a0f;
+  border-color: #0a0a0f;
+}
+.button-hollow.light,
+input[type=button].hollow.light,
+button.hollow.light {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%);
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 600;
+  cursor: pointer;
+}
+.button-hollow.light:hover, .button-hollow.light:focus,
+input[type=button].hollow.light:hover,
+input[type=button].hollow.light:focus,
+button.hollow.light:hover,
+button.hollow.light:focus {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 100%);
+  color: #ffffff;
+  border-color: #ffffff;
+}
+.button-hollow.primary,
+input[type=button].hollow.primary,
+button.hollow.primary {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(139, 92, 246, 0.05) 100%);
+  color: #8b5cf6;
+  border: 1px solid #8b5cf6;
+  border-radius: 0.5rem;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 600;
+  cursor: pointer;
+}
+.button-hollow.primary:hover, .button-hollow.primary:focus,
+input[type=button].hollow.primary:hover,
+input[type=button].hollow.primary:focus,
+button.hollow.primary:hover,
+button.hollow.primary:focus {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.3) 0%, rgba(139, 92, 246, 0.1) 100%);
+  color: #8b5cf6;
+  border-color: #8b5cf6;
+}
+.button-hollow.secondary,
+input[type=button].hollow.secondary,
+button.hollow.secondary {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(236, 72, 153, 0.05) 100%);
+  color: #ec4899;
+  border: 1px solid #ec4899;
+  border-radius: 0.5rem;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 600;
+  cursor: pointer;
+}
+.button-hollow.secondary:hover, .button-hollow.secondary:focus,
+input[type=button].hollow.secondary:hover,
+input[type=button].hollow.secondary:focus,
+button.hollow.secondary:hover,
+button.hollow.secondary:focus {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.3) 0%, rgba(236, 72, 153, 0.1) 100%);
+  color: #ec4899;
+  border-color: #ec4899;
+}
+.button-hollow.tertiary,
+input[type=button].hollow.tertiary,
+button.hollow.tertiary {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.2) 0%, rgba(14, 165, 233, 0.05) 100%);
+  color: #0ea5e9;
+  border: 1px solid #0ea5e9;
+  border-radius: 0.5rem;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 600;
+  cursor: pointer;
+}
+.button-hollow.tertiary:hover, .button-hollow.tertiary:focus,
+input[type=button].hollow.tertiary:hover,
+input[type=button].hollow.tertiary:focus,
+button.hollow.tertiary:hover,
+button.hollow.tertiary:focus {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.3) 0%, rgba(14, 165, 233, 0.1) 100%);
+  color: #0ea5e9;
+  border-color: #0ea5e9;
+}
+.button-hollow.quaternary,
+input[type=button].hollow.quaternary,
+button.hollow.quaternary {
+  background: linear-gradient(135deg, rgba(132, 204, 22, 0.2) 0%, rgba(132, 204, 22, 0.05) 100%);
+  color: #84cc16;
+  border: 1px solid #84cc16;
+  border-radius: 0.5rem;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 600;
+  cursor: pointer;
+}
+.button-hollow.quaternary:hover, .button-hollow.quaternary:focus,
+input[type=button].hollow.quaternary:hover,
+input[type=button].hollow.quaternary:focus,
+button.hollow.quaternary:hover,
+button.hollow.quaternary:focus {
+  background: linear-gradient(135deg, rgba(132, 204, 22, 0.3) 0%, rgba(132, 204, 22, 0.1) 100%);
+  color: #84cc16;
+  border-color: #84cc16;
+}
+.button-hollow.red,
+input[type=button].hollow.red,
+button.hollow.red {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(239, 68, 68, 0.05) 100%);
+  color: #ef4444;
+  border: 1px solid #ef4444;
+  border-radius: 0.5rem;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 600;
+  cursor: pointer;
+}
+.button-hollow.red:hover, .button-hollow.red:focus,
+input[type=button].hollow.red:hover,
+input[type=button].hollow.red:focus,
+button.hollow.red:hover,
+button.hollow.red:focus {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.3) 0%, rgba(239, 68, 68, 0.1) 100%);
+  color: #ef4444;
+  border-color: #ef4444;
+}
+.button-hollow.green,
+input[type=button].hollow.green,
+button.hollow.green {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(34, 197, 94, 0.05) 100%);
+  color: #22c55e;
+  border: 1px solid #22c55e;
+  border-radius: 0.5rem;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 600;
+  cursor: pointer;
+}
+.button-hollow.green:hover, .button-hollow.green:focus,
+input[type=button].hollow.green:hover,
+input[type=button].hollow.green:focus,
+button.hollow.green:hover,
+button.hollow.green:focus {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.3) 0%, rgba(34, 197, 94, 0.1) 100%);
+  color: #22c55e;
+  border-color: #22c55e;
+}
+.button-hollow.blue,
+input[type=button].hollow.blue,
+button.hollow.blue {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0.05) 100%);
+  color: #3b82f6;
+  border: 1px solid #3b82f6;
+  border-radius: 0.5rem;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 600;
+  cursor: pointer;
+}
+.button-hollow.blue:hover, .button-hollow.blue:focus,
+input[type=button].hollow.blue:hover,
+input[type=button].hollow.blue:focus,
+button.hollow.blue:hover,
+button.hollow.blue:focus {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.1) 100%);
+  color: #3b82f6;
+  border-color: #3b82f6;
+}
+.button-hollow.cyan,
+input[type=button].hollow.cyan,
+button.hollow.cyan {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(6, 182, 212, 0.05) 100%);
+  color: #06b6d4;
+  border: 1px solid #06b6d4;
+  border-radius: 0.5rem;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 600;
+  cursor: pointer;
+}
+.button-hollow.cyan:hover, .button-hollow.cyan:focus,
+input[type=button].hollow.cyan:hover,
+input[type=button].hollow.cyan:focus,
+button.hollow.cyan:hover,
+button.hollow.cyan:focus {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.3) 0%, rgba(6, 182, 212, 0.1) 100%);
+  color: #06b6d4;
+  border-color: #06b6d4;
+}
+.button-hollow.yellow,
+input[type=button].hollow.yellow,
+button.hollow.yellow {
+  background: linear-gradient(135deg, rgba(234, 179, 8, 0.2) 0%, rgba(234, 179, 8, 0.05) 100%);
+  color: #eab308;
+  border: 1px solid #eab308;
+  border-radius: 0.5rem;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 600;
+  cursor: pointer;
+}
+.button-hollow.yellow:hover, .button-hollow.yellow:focus,
+input[type=button].hollow.yellow:hover,
+input[type=button].hollow.yellow:focus,
+button.hollow.yellow:hover,
+button.hollow.yellow:focus {
+  background: linear-gradient(135deg, rgba(234, 179, 8, 0.3) 0%, rgba(234, 179, 8, 0.1) 100%);
+  color: #eab308;
+  border-color: #eab308;
+}
+.button-hollow.magenta,
+input[type=button].hollow.magenta,
+button.hollow.magenta {
+  background: linear-gradient(135deg, rgba(217, 70, 239, 0.2) 0%, rgba(217, 70, 239, 0.05) 100%);
+  color: #d946ef;
+  border: 1px solid #d946ef;
+  border-radius: 0.5rem;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 600;
+  cursor: pointer;
+}
+.button-hollow.magenta:hover, .button-hollow.magenta:focus,
+input[type=button].hollow.magenta:hover,
+input[type=button].hollow.magenta:focus,
+button.hollow.magenta:hover,
+button.hollow.magenta:focus {
+  background: linear-gradient(135deg, rgba(217, 70, 239, 0.3) 0%, rgba(217, 70, 239, 0.1) 100%);
+  color: #d946ef;
+  border-color: #d946ef;
+}
+
 .dark {
   background-color: #0a0a0f;
 }
