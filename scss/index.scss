@@ -56,6 +56,9 @@ body {
     font-size: 55%;
   }
 }
+:root {
+  @each $key, $value in $variables {
+    --#{$key}: #{$value};
+  }
+}
 // endregion
-
-

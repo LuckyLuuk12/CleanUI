@@ -49,3 +49,26 @@ To use it, make sure you import Highlight.js in your project as well, e.g.:
 * CSS: Precompiled version for direct use without SCSS processing. Though, no variable overrides are possible.
 
 _See [_variables](scss/_variables.scss)_ for all available variables._
+
+# Publishing to npm
+
+To publish CleanUI to npm, follow these steps:
+
+1. **Update your package version**
+   - Edit `package.json` and increment the `version` field as needed.
+
+2. **Build your package**
+   - Make sure your CSS/SCSS is compiled and all files are ready for publishing.
+
+3. **Login to npm**
+   - Run `npm login` in your terminal and enter your npm credentials.
+
+4. **Publish the package**
+   - Run `npm publish --access public` in your project root directory.
+
+**Notes:**
+- Make sure your package name in `package.json` is unique and scoped (e.g. `@kablan/clean-ui`).
+- Do not include sensitive information (passwords, keys) in your repository.
+- You must have permission to publish to the npm scope you use.
+
+For more details, see the [npm publish documentation](https://docs.npmjs.com/cli/v10/commands/npm-publish).

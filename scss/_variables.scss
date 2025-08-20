@@ -1,476 +1,375 @@
 // region Variables
 
+$variables: (
+  // Colors
+  "dark": #0a0a0f,
+  "dark-50": #a0a0aa,
+  "dark-100": #8a8a93,
+  "dark-200": #75757d,
+  "dark-300": #65656c,
+  "dark-400": #55555b,
+  "dark-500": #45454a,
+  "dark-600": #35353a,
+  "dark-700": #26262a,
+  "dark-800": #1e1e20,
+  "dark-900": #0a0a0f,
+  "light": #ffffff,
+  "light-50": #ffffff,
+  "light-100": #f7f7fa,
+  "light-200": #ececf0,
+  "light-300": #e2e2e8,
+  "light-400": #d6d6de,
+  "light-500": #c8c8d2,
+  "light-600": #bcbcc6,
+  "light-700": #b2b2bd,
+  "light-800": #ababba,
+  "light-900": #a0a0aa,
+  "primary": #8b5cf6,
+  "primary-50": #f5f3ff,
+  "primary-100": #ede9fe,
+  "primary-200": #ddd6fe,
+  "primary-300": #c4b5fd,
+  "primary-400": #a78bfa,
+  "primary-500": #8b5cf6,
+  "primary-600": #7c3aed,
+  "primary-700": #6d28d9,
+  "primary-800": #5b21b6,
+  "primary-900": #4c1d95,
+  "secondary": #ec4899,
+  "secondary-50": #fdf2f8,
+  "secondary-100": #fce7f3,
+  "secondary-200": #fbcfe8,
+  "secondary-300": #f9a8d4,
+  "secondary-400": #f472b6,
+  "secondary-500": #ec4899,
+  "secondary-600": #db2777,
+  "secondary-700": #be185d,
+  "secondary-800": #9d174d,
+  "secondary-900": #831843,
+  "tertiary": #0ea5e9,
+  "tertiary-50": #f0f9ff,
+  "tertiary-100": #e0f2fe,
+  "tertiary-200": #bae6fd,
+  "tertiary-300": #7dd3fc,
+  "tertiary-400": #38bdf8,
+  "tertiary-500": #0ea5e9,
+  "tertiary-600": #0284c7,
+  "tertiary-700": #0369a1,
+  "tertiary-800": #075985,
+  "tertiary-900": #0c4a6e,
+  "quaternary": #84cc16,
+  "quaternary-50": #f7fee7,
+  "quaternary-100": #ecfccb,
+  "quaternary-200": #d9f99d,
+  "quaternary-300": #bef264,
+  "quaternary-400": #a3e635,
+  "quaternary-500": #84cc16,
+  "quaternary-600": #65a30d,
+  "quaternary-700": #4d7c0f,
+  "quaternary-800": #3f6212,
+  "quaternary-900": #365314,
+  "red": #ef4444,
+  "red-50": #fef2f2,
+  "red-100": #fee2e2,
+  "red-200": #fecaca,
+  "red-300": #fca5a5,
+  "red-400": #f87171,
+  "red-500": #ef4444,
+  "red-600": #dc2626,
+  "red-700": #b91c1c,
+  "red-800": #991b1b,
+  "red-900": #7f1d1d,
+  "green": #22c55e,
+  "green-50": #f0fdf4,
+  "green-100": #dcfce7,
+  "green-200": #bbf7d0,
+  "green-300": #86efac,
+  "green-400": #4ade80,
+  "green-500": #22c55e,
+  "green-600": #16a34a,
+  "green-700": #15803d,
+  "green-800": #166534,
+  "green-900": #14532d,
+  "blue": #3b82f6,
+  "blue-50": #eff6ff,
+  "blue-100": #dbeafe,
+  "blue-200": #bfdbfe,
+  "blue-300": #93c5fd,
+  "blue-400": #60a5fa,
+  "blue-500": #3b82f6,
+  "blue-600": #2563eb,
+  "blue-700": #1d4ed8,
+  "blue-800": #1e40af,
+  "blue-900": #1e3a8a,
+  "cyan": #06b6d4,
+  "cyan-50": #ecfeff,
+  "cyan-100": #cffafe,
+  "cyan-200": #a5f3fc,
+  "cyan-300": #67e8f9,
+  "cyan-400": #22d3ee,
+  "cyan-500": #06b6d4,
+  "cyan-600": #0891b2,
+  "cyan-700": #0e7490,
+  "cyan-800": #155e75,
+  "cyan-900": #164e63,
+  "yellow": #eab308,
+  "yellow-50": #fefce8,
+  "yellow-100": #fef9c3,
+  "yellow-200": #fef08a,
+  "yellow-300": #fde047,
+  "yellow-400": #facc15,
+  "yellow-500": #eab308,
+  "yellow-600": #ca8a04,
+  "yellow-700": #a16207,
+  "yellow-800": #854d0e,
+  "yellow-900": #713f12,
+  "magenta": #d946ef,
+  "magenta-50": #fdf4ff,
+  "magenta-100": #fae8ff,
+  "magenta-200": #f5d0fe,
+  "magenta-300": #f0abfc,
+  "magenta-400": #e879f9,
+  "magenta-500": #d946ef,
+  "magenta-600": #c026d3,
+  "magenta-700": #a21caf,
+  "magenta-800": #86198f,
+  "magenta-900": #701a75,
+  // Backgrounds / Containers
+  "text": #ffffff,
+  "background": #0a0a0f,
+  "container": #1e1e20,
+  "card": #26262a,
+  "input": #35353a,
+  "placeholder": #a0a0aa,
+  "button": #45454a,
+  "button-hover": #35353a,
+  // Fonts
+  "font": 'Open sans, Tahoma, Geneva, sans-serif',
+  "font-code": 'Courier New, Courier, monospace',
+  "font-heading": 'Arial Black, Gadget, sans-serif',
+  "font-fancy": 'Brush Script MT, cursive',
+  "font-size-tiny": 0.5rem,
+  "font-size-small": 0.75rem,
+  "font-size": 1rem,
+  "font-size-large": 1.25rem,
+  "font-size-huge": 2rem,
+  // Misc
+  "small": 0.1rem,
+  "medium": 0.25rem,
+  "normal": 0.5rem,
+  "large": 1rem,
+  "huge": 1.5rem,
+  "border-radius-tiny": 0.1rem,
+  "border-radius-small": 0.25rem,
+  "border-radius": 0.5rem,
+  "border-radius-large": 1rem,
+  "button-text": #ffffff,
+  "button-border": #bcbcc6,
+  "button-opacity": 0.9,
+  "button-padding-small": 0.25rem 0.5rem,
+  "button-padding": 0.5rem 1rem,
+  "button-padding-large": 1rem 1.5rem,
+  "container-padding": 1.5rem,
+  "container-border-radius": 0.5rem,
+  "card-padding": 1rem,
+  "card-border-radius": 0.5rem
+);
 
 // region Colors / Theme
-// region Dark
-$dark-50:  #a0a0aa !default;   // Lightest dark
-$dark-100: #8a8a93 !default;
-$dark-200: #75757d !default;
-$dark-300: #65656c !default;
-$dark-400: #55555b !default;
-$dark-500: #45454a !default;
-$dark-600: #35353a !default;
-$dark-700: #26262a !default;
-$dark-800: #1e1e20 !default;
-$dark-900: #0a0a0f !default;   // Main/darkest background
-$dark:     #0a0a0f !default;
-// endregion
-// region Light
-$light-50:  #ffffff !default;   // Lightest
-$light-100: #f7f7fa !default;
-$light-200: #ececf0 !default;
-$light-300: #e2e2e8 !default;
-$light-400: #d6d6de !default;
-$light-500: #c8c8d2 !default;
-$light-600: #bcbcc6 !default;
-$light-700: #b2b2bd !default;
-$light-800: #ababba !default;
-$light-900: #a0a0aa !default;   // Continues from $dark-50
-$light:     #ffffff !default;
-// endregion
-// region Primary: purplish-magenta tone
-/// Lightest shade of primary
-$primary-50: #f5f3ff;   // Lightest purple
-$primary-100: #ede9fe;
-$primary-200: #ddd6fe;
-$primary-300: #c4b5fd;
-$primary-400: #a78bfa;
-$primary-500: #8b5cf6;  // Main purple - more blueish than magenta
-$primary: #8b5cf6;  // Main purple - more blueish than magenta
-$primary-600: #7c3aed;
-$primary-700: #6d28d9;
-$primary-800: #5b21b6;
-$primary-900: #4c1d95;  // Darkest purple
-// endregion
-// region Secondary: more pink-ish version of primary
-/// Lightest shade of secondary
-$secondary-50:  #fdf2f8 !default;
-/// Lighter than $secondary-200
-$secondary-100: #fce7f3 !default;
-/// Lighter than $secondary-300
-$secondary-200: #fbcfe8 !default;
-/// Lighter than $secondary-400
-$secondary-300: #f9a8d4 !default;
-/// Lighter than $secondary-500
-$secondary-400: #f472b6 !default;
-/// Base secondary color (pink-ish)
-$secondary-500: #ec4899 !default;
-$secondary: #ec4899 !default;
-/// Darker than $secondary-500
-$secondary-600: #db2777 !default;
-/// Darker than $secondary-600
-$secondary-700: #be185d !default;
-/// Darker than $secondary-700
-$secondary-800: #9d174d !default;
-/// Darkest shade of secondary
-$secondary-900: #831843 !default;
-// endregion
-// region Tertiary: Electric blue
-$tertiary-50: #f0f9ff;
-$tertiary-100: #e0f2fe;
-$tertiary-200: #bae6fd;
-$tertiary-300: #7dd3fc;
-$tertiary-400: #38bdf8;
-$tertiary-500: #0ea5e9;  // Main electric blue
-$tertiary: #0ea5e9;
-$tertiary-600: #0284c7;
-$tertiary-700: #0369a1;
-$tertiary-800: #075985;
-$tertiary-900: #0c4a6e;
-// endregion
-
-// region Quaternary: Lime green
-$quaternary-50: #f7fee7;
-$quaternary-100: #ecfccb;
-$quaternary-200: #d9f99d;
-$quaternary-300: #bef264;
-$quaternary-400: #a3e635;
-$quaternary-500: #84cc16;  // Main lime
-$quaternary: #84cc16;
-$quaternary-600: #65a30d;
-$quaternary-700: #4d7c0f;
-$quaternary-800: #3f6212;
-$quaternary-900: #365314;
-// endregion
-// region Red
-/// Lightest shade of red
-$red-50:  #fef2f2 !default;
-/// Lighter than $red-200
-$red-100: #fee2e2 !default;
-/// Lighter than $red-300
-$red-200: #fecaca !default;
-/// Lighter than $red-400
-$red-300: #fca5a5 !default;
-/// Lighter than $red-500
-$red-400: #f87171 !default;
-/// Base red color
-$red-500: #ef4444 !default;
-$red: #ef4444 !default;
-/// Darker than $red-500
-$red-600: #dc2626 !default;
-/// Darker than $red-600
-$red-700: #b91c1c !default;
-/// Darker than $red-700
-$red-800: #991b1b !default;
-/// Darkest shade of red
-$red-900: #7f1d1d !default;
-// endregion
-// region Green
-/// Lightest shade of green
-$green-50:  #f0fdf4 !default;
-/// Lighter than $green-200
-$green-100: #dcfce7 !default;
-/// Lighter than $green-300
-$green-200: #bbf7d0 !default;
-/// Lighter than $green-400
-$green-300: #86efac !default;
-/// Lighter than $green-500
-$green-400: #4ade80 !default;
-/// Base green color
-$green-500: #22c55e !default;
-$green: #22c55e !default;
-/// Darker than $green-500
-$green-600: #16a34a !default;
-/// Darker than $green-600
-$green-700: #15803d !default;
-/// Darker than $green-700
-$green-800: #166534 !default;
-/// Darkest shade of green
-$green-900: #14532d !default;
-// endregion
-// region Blue
-/// Lightest shade of blue
-$blue-50:  #eff6ff !default;
-/// Lighter than $blue-200
-$blue-100: #dbeafe !default;
-/// Lighter than $blue-300
-$blue-200: #bfdbfe !default;
-/// Lighter than $blue-400
-$blue-300: #93c5fd !default;
-/// Lighter than $blue-500
-$blue-400: #60a5fa !default;
-/// Base blue color
-$blue-500: #3b82f6 !default;
-$blue: #3b82f6 !default;
-/// Darker than $blue-500
-$blue-600: #2563eb !default;
-/// Darker than $blue-600
-$blue-700: #1d4ed8 !default;
-/// Darker than $blue-700
-$blue-800: #1e40af !default;
-/// Darkest shade of blue
-$blue-900: #1e3a8a !default;
-// endregion
-// region Cyan
-/// Lightest shade of cyan
-$cyan-50:  #ecfeff !default;
-/// Lighter than $cyan-200
-$cyan-100: #cffafe !default;
-/// Lighter than $cyan-300
-$cyan-200: #a5f3fc !default;
-/// Lighter than $cyan-400
-$cyan-300: #67e8f9 !default;
-/// Lighter than $cyan-500
-$cyan-400: #22d3ee !default;
-/// Base cyan color
-$cyan-500: #06b6d4 !default;
-$cyan: #06b6d4 !default;
-/// Darker than $cyan-500
-$cyan-600: #0891b2 !default;
-/// Darker than $cyan-600
-$cyan-700: #0e7490 !default;
-/// Darker than $cyan-700
-$cyan-800: #155e75 !default;
-/// Darkest shade of cyan
-$cyan-900: #164e63 !default;
-// endregion
-// region Yellow
-/// Lightest shade of yellow
-$yellow-50:  #fefce8 !default;
-/// Lighter than $yellow-200
-$yellow-100: #fef9c3 !default;
-/// Lighter than $yellow-300
-$yellow-200: #fef08a !default;
-/// Lighter than $yellow-400
-$yellow-300: #fde047 !default;
-/// Lighter than $yellow-500
-$yellow-400: #facc15 !default;
-/// Base yellow color
-$yellow-500: #eab308 !default;
-$yellow: #eab308 !default;
-/// Darker than $yellow-500
-$yellow-600: #ca8a04 !default;
-/// Darker than $yellow-600
-$yellow-700: #a16207 !default;
-/// Darker than $yellow-700
-$yellow-800: #854d0e !default;
-/// Darkest shade of yellow
-$yellow-900: #713f12 !default;
-// endregion
-// region Magenta
-/// Lightest shade of magenta
-$magenta-50:  #fdf4ff !default;
-/// Lighter than $magenta-200
-$magenta-100: #fae8ff !default;
-/// Lighter than $magenta-300
-$magenta-200: #f5d0fe !default;
-/// Lighter than $magenta-400
-$magenta-300: #f0abfc !default;
-/// Lighter than $magenta-500
-$magenta-400: #e879f9 !default;
-/// Base magenta color
-$magenta-500: #d946ef !default;
-$magenta: #d946ef !default;
-/// Darker than $magenta-500
-$magenta-600: #c026d3 !default;
-/// Darker than $magenta-600
-$magenta-700: #a21caf !default;
-/// Darker than $magenta-700
-$magenta-800: #86198f !default;
-/// Darkest shade of magenta
-$magenta-900: #701a75 !default;
-// endregion
+$dark: map-get($variables, "dark") !default;
+$dark-50: map-get($variables, "dark-50") !default;
+$dark-100: map-get($variables, "dark-100") !default;
+$dark-200: map-get($variables, "dark-200") !default;
+$dark-300: map-get($variables, "dark-300") !default;
+$dark-400: map-get($variables, "dark-400") !default;
+$dark-500: map-get($variables, "dark-500") !default;
+$dark-600: map-get($variables, "dark-600") !default;
+$dark-700: map-get($variables, "dark-700") !default;
+$dark-800: map-get($variables, "dark-800") !default;
+$dark-900: map-get($variables, "dark-900") !default;
+$light: map-get($variables, "light") !default;
+$light-50: map-get($variables, "light-50") !default;
+$light-100: map-get($variables, "light-100") !default;
+$light-200: map-get($variables, "light-200") !default;
+$light-300: map-get($variables, "light-300") !default;
+$light-400: map-get($variables, "light-400") !default;
+$light-500: map-get($variables, "light-500") !default;
+$light-600: map-get($variables, "light-600") !default;
+$light-700: map-get($variables, "light-700") !default;
+$light-800: map-get($variables, "light-800") !default;
+$light-900: map-get($variables, "light-900") !default;
+$primary: map-get($variables, "primary") !default;
+$primary-50: map-get($variables, "primary-50") !default;
+$primary-100: map-get($variables, "primary-100") !default;
+$primary-200: map-get($variables, "primary-200") !default;
+$primary-300: map-get($variables, "primary-300") !default;
+$primary-400: map-get($variables, "primary-400") !default;
+$primary-500: map-get($variables, "primary-500") !default;
+$primary-600: map-get($variables, "primary-600") !default;
+$primary-700: map-get($variables, "primary-700") !default;
+$primary-800: map-get($variables, "primary-800") !default;
+$primary-900: map-get($variables, "primary-900") !default;
+$secondary: map-get($variables, "secondary") !default;
+$secondary-50: map-get($variables, "secondary-50") !default;
+$secondary-100: map-get($variables, "secondary-100") !default;
+$secondary-200: map-get($variables, "secondary-200") !default;
+$secondary-300: map-get($variables, "secondary-300") !default;
+$secondary-400: map-get($variables, "secondary-400") !default;
+$secondary-500: map-get($variables, "secondary-500") !default;
+$secondary-600: map-get($variables, "secondary-600") !default;
+$secondary-700: map-get($variables, "secondary-700") !default;
+$secondary-800: map-get($variables, "secondary-800") !default;
+$secondary-900: map-get($variables, "secondary-900") !default;
+$tertiary: map-get($variables, "tertiary") !default;
+$tertiary-50: map-get($variables, "tertiary-50") !default;
+$tertiary-100: map-get($variables, "tertiary-100") !default;
+$tertiary-200: map-get($variables, "tertiary-200") !default;
+$tertiary-300: map-get($variables, "tertiary-300") !default;
+$tertiary-400: map-get($variables, "tertiary-400") !default;
+$tertiary-500: map-get($variables, "tertiary-500") !default;
+$tertiary-600: map-get($variables, "tertiary-600") !default;
+$tertiary-700: map-get($variables, "tertiary-700") !default;
+$tertiary-800: map-get($variables, "tertiary-800") !default;
+$tertiary-900: map-get($variables, "tertiary-900") !default;
+$quaternary: map-get($variables, "quaternary") !default;
+$quaternary-50: map-get($variables, "quaternary-50") !default;
+$quaternary-100: map-get($variables, "quaternary-100") !default;
+$quaternary-200: map-get($variables, "quaternary-200") !default;
+$quaternary-300: map-get($variables, "quaternary-300") !default;
+$quaternary-400: map-get($variables, "quaternary-400") !default;
+$quaternary-500: map-get($variables, "quaternary-500") !default;
+$quaternary-600: map-get($variables, "quaternary-600") !default;
+$quaternary-700: map-get($variables, "quaternary-700") !default;
+$quaternary-800: map-get($variables, "quaternary-800") !default;
+$quaternary-900: map-get($variables, "quaternary-900") !default;
+$red: map-get($variables, "red") !default;
+$red-50: map-get($variables, "red-50") !default;
+$red-100: map-get($variables, "red-100") !default;
+$red-200: map-get($variables, "red-200") !default;
+$red-300: map-get($variables, "red-300") !default;
+$red-400: map-get($variables, "red-400") !default;
+$red-500: map-get($variables, "red-500") !default;
+$red-600: map-get($variables, "red-600") !default;
+$red-700: map-get($variables, "red-700") !default;
+$red-800: map-get($variables, "red-800") !default;
+$red-900: map-get($variables, "red-900") !default;
+$green: map-get($variables, "green") !default;
+$green-50: map-get($variables, "green-50") !default;
+$green-100: map-get($variables, "green-100") !default;
+$green-200: map-get($variables, "green-200") !default;
+$green-300: map-get($variables, "green-300") !default;
+$green-400: map-get($variables, "green-400") !default;
+$green-500: map-get($variables, "green-500") !default;
+$green-600: map-get($variables, "green-600") !default;
+$green-700: map-get($variables, "green-700") !default;
+$green-800: map-get($variables, "green-800") !default;
+$green-900: map-get($variables, "green-900") !default;
+$blue: map-get($variables, "blue") !default;
+$blue-50: map-get($variables, "blue-50") !default;
+$blue-100: map-get($variables, "blue-100") !default;
+$blue-200: map-get($variables, "blue-200") !default;
+$blue-300: map-get($variables, "blue-300") !default;
+$blue-400: map-get($variables, "blue-400") !default;
+$blue-500: map-get($variables, "blue-500") !default;
+$blue-600: map-get($variables, "blue-600") !default;
+$blue-700: map-get($variables, "blue-700") !default;
+$blue-800: map-get($variables, "blue-800") !default;
+$blue-900: map-get($variables, "blue-900") !default;
+$cyan: map-get($variables, "cyan") !default;
+$cyan-50: map-get($variables, "cyan-50") !default;
+$cyan-100: map-get($variables, "cyan-100") !default;
+$cyan-200: map-get($variables, "cyan-200") !default;
+$cyan-300: map-get($variables, "cyan-300") !default;
+$cyan-400: map-get($variables, "cyan-400") !default;
+$cyan-500: map-get($variables, "cyan-500") !default;
+$cyan-600: map-get($variables, "cyan-600") !default;
+$cyan-700: map-get($variables, "cyan-700") !default;
+$cyan-800: map-get($variables, "cyan-800") !default;
+$cyan-900: map-get($variables, "cyan-900") !default;
+$yellow: map-get($variables, "yellow") !default;
+$yellow-50: map-get($variables, "yellow-50") !default;
+$yellow-100: map-get($variables, "yellow-100") !default;
+$yellow-200: map-get($variables, "yellow-200") !default;
+$yellow-300: map-get($variables, "yellow-300") !default;
+$yellow-400: map-get($variables, "yellow-400") !default;
+$yellow-500: map-get($variables, "yellow-500") !default;
+$yellow-600: map-get($variables, "yellow-600") !default;
+$yellow-700: map-get($variables, "yellow-700") !default;
+$yellow-800: map-get($variables, "yellow-800") !default;
+$yellow-900: map-get($variables, "yellow-900") !default;
+$magenta: map-get($variables, "magenta") !default;
+$magenta-50: map-get($variables, "magenta-50") !default;
+$magenta-100: map-get($variables, "magenta-100") !default;
+$magenta-200: map-get($variables, "magenta-200") !default;
+$magenta-300: map-get($variables, "magenta-300") !default;
+$magenta-400: map-get($variables, "magenta-400") !default;
+$magenta-500: map-get($variables, "magenta-500") !default;
+$magenta-600: map-get($variables, "magenta-600") !default;
+$magenta-700: map-get($variables, "magenta-700") !default;
+$magenta-800: map-get($variables, "magenta-800") !default;
+$magenta-900: map-get($variables, "magenta-900") !default;
 // endregion
 
 
 // region Backgrounds / Containers ~ Luuk Kablan: "$#!? light mode!"
 /// A light text color as light mode is bad
-$text: $light !default;
+$text: map-get($variables, "text") !default;
 /// A dark background color
-$background: $dark !default;
+$background: map-get($variables, "background") !default;
 /// A bit lighter than $background for containers
-$container: $dark-800 !default;
+$container: map-get($variables, "container") !default;
 /// A bit lighter than $container for cards
-$card: $dark-700 !default;
+$card: map-get($variables, "card") !default;
 /// "far lighter" than $card for inputs
-$input: $dark-600 !default;
+$input: map-get($variables, "input") !default;
 /// A very light color for placeholder text inside inputs
-$placeholder: $light-900 !default;
+$placeholder: map-get($variables, "placeholder") !default;
 /// A slightly darker that $container for buttons
-$button: $dark-500 !default;
-$button-hover: $dark-600 !default;
+$button: map-get($variables, "button") !default;
+$button-hover: map-get($variables, "button-hover") !default;
 // endregion
 
 
 // region Fonts
 /// Main font used across projects
-$font: 'Open sans', Tahoma, Geneva, sans-serif !default;
+$font: map-get($variables, "font") !default;
 /// Font for code blocks
-$font-code: 'Courier New', Courier, monospace !default;
+$font-code: map-get($variables, "font-code") !default;
 /// Font for headings
-$font-heading: 'Arial Black', Gadget, sans-serif !default;
+$font-heading: map-get($variables, "font-heading") !default;
 /// A "fancy" curly written font, can be used for titles or special text
-$font-fancy: 'Brush Script MT', cursive !default;
-$font-size-tiny: 0.5rem !default;
-$font-size-small: 0.75rem !default;
-$font-size: 1rem !default;
-$font-size-large: 1.25rem !default;
-$font-size-huge: 2rem !default;
+$font-fancy: map-get($variables, "font-fancy") !default;
+$font-size-tiny: map-get($variables, "font-size-tiny") !default;
+$font-size-small: map-get($variables, "font-size-small") !default;
+$font-size: map-get($variables, "font-size") !default;
+$font-size-large: map-get($variables, "font-size-large") !default;
+$font-size-huge: map-get($variables, "font-size-huge") !default;
 // endregion
 
 
 // region Misc
-$small: 0.1rem !default;
-$medium: 0.25rem !default;
-$normal: 0.5rem !default;
-$large: 1rem !default;
-$huge: 1.5rem !default;
-$border-radius-tiny: 0.1rem !default;
-$border-radius-small: 0.25rem !default;
-$border-radius: 0.5rem !default;
-$border-radius-large: 1rem !default;
+$small: map-get($variables, "small") !default;
+$medium: map-get($variables, "medium") !default;
+$normal: map-get($variables, "normal") !default;
+$large: map-get($variables, "large") !default;
+$huge: map-get($variables, "huge") !default;
+$border-radius-tiny: map-get($variables, "border-radius-tiny") !default;
+$border-radius-small: map-get($variables, "border-radius-small") !default;
+$border-radius: map-get($variables, "border-radius") !default;
+$border-radius-large: map-get($variables, "border-radius-large") !default;
+$button-text: map-get($variables, "button-text") !default;
+$button-border: map-get($variables, "button-border") !default;
+$button-opacity: map-get($variables, "button-opacity") !default;
 
-$button-text: $light-50 !default;
-$button-border: $light-600 !default;
-$button-opacity: 0.9 !default;
+$button-padding-small: map-get($variables, "button-padding-small") !default;
+$button-padding: map-get($variables, "button-padding") !default;
+$button-padding-large: map-get($variables, "button-padding-large") !default;
 
-$button-padding-small: $medium $normal !default;
-$button-padding: $normal $large !default;
-$button-padding-large: $large $huge !default;
+$container-padding: map-get($variables, "container-padding") !default;
+$container-border-radius: map-get($variables, "container-border-radius") !default;
 
-$container-padding: 1.5rem !default;
-$container-border-radius: $border-radius !default;
-
-$card-padding: 1rem !default;
-$card-border-radius: $border-radius !default;
-// endregion
-
-// region Dynamic variable map
-$variables: (
-  // Colors
-        "dark": $dark,
-        "dark-50": $dark-50,
-        "dark-100": $dark-100,
-        "dark-200": $dark-200,
-        "dark-300": $dark-300,
-        "dark-400": $dark-400,
-        "dark-500": $dark-500,
-        "dark-600": $dark-600,
-        "dark-700": $dark-700,
-        "dark-800": $dark-800,
-        "dark-900": $dark-900,
-
-        "light": $light,
-        "light-50": $light-50,
-        "light-100": $light-100,
-        "light-200": $light-200,
-        "light-300": $light-300,
-        "light-400": $light-400,
-        "light-500": $light-500,
-        "light-600": $light-600,
-        "light-700": $light-700,
-        "light-800": $light-800,
-        "light-900": $light-900,
-
-        "primary": $primary,
-        "primary-50": $primary-50,
-        "primary-100": $primary-100,
-        "primary-200": $primary-200,
-        "primary-300": $primary-300,
-        "primary-400": $primary-400,
-        "primary-500": $primary-500,
-        "primary-600": $primary-600,
-        "primary-700": $primary-700,
-        "primary-800": $primary-800,
-        "primary-900": $primary-900,
-
-        "secondary": $secondary,
-        "secondary-50": $secondary-50,
-        "secondary-100": $secondary-100,
-        "secondary-200": $secondary-200,
-        "secondary-300": $secondary-300,
-        "secondary-400": $secondary-400,
-        "secondary-500": $secondary-500,
-        "secondary-600": $secondary-600,
-        "secondary-700": $secondary-700,
-        "secondary-800": $secondary-800,
-        "secondary-900": $secondary-900,
-
-        "tertiary": $tertiary,
-        "tertiary-50": $tertiary-50,
-        "tertiary-100": $tertiary-100,
-        "tertiary-200": $tertiary-200,
-        "tertiary-300": $tertiary-300,
-        "tertiary-400": $tertiary-400,
-        "tertiary-500": $tertiary-500,
-        "tertiary-600": $tertiary-600,
-        "tertiary-700": $tertiary-700,
-        "tertiary-800": $tertiary-800,
-        "tertiary-900": $tertiary-900,
-
-        "quaternary": $quaternary,
-        "quaternary-50": $quaternary-50,
-        "quaternary-100": $quaternary-100,
-        "quaternary-200": $quaternary-200,
-        "quaternary-300": $quaternary-300,
-        "quaternary-400": $quaternary-400,
-        "quaternary-500": $quaternary-500,
-        "quaternary-600": $quaternary-600,
-        "quaternary-700": $quaternary-700,
-        "quaternary-800": $quaternary-800,
-        "quaternary-900": $quaternary-900,
-
-        "red": $red,
-        "red-50": $red-50,
-        "red-100": $red-100,
-        "red-200": $red-200,
-        "red-300": $red-300,
-        "red-400": $red-400,
-        "red-500": $red-500,
-        "red-600": $red-600,
-        "red-700": $red-700,
-        "red-800": $red-800,
-        "red-900": $red-900,
-
-        "green": $green,
-        "green-50": $green-50,
-        "green-100": $green-100,
-        "green-200": $green-200,
-        "green-300": $green-300,
-        "green-400": $green-400,
-        "green-500": $green-500,
-        "green-600": $green-600,
-        "green-700": $green-700,
-        "green-800": $green-800,
-        "green-900": $green-900,
-
-        "blue": $blue,
-        "blue-50": $blue-50,
-        "blue-100": $blue-100,
-        "blue-200": $blue-200,
-        "blue-300": $blue-300,
-        "blue-400": $blue-400,
-        "blue-500": $blue-500,
-        "blue-600": $blue-600,
-        "blue-700": $blue-700,
-        "blue-800": $blue-800,
-        "blue-900": $blue-900,
-
-        "cyan": $cyan,
-        "cyan-50": $cyan-50,
-        "cyan-100": $cyan-100,
-        "cyan-200": $cyan-200,
-        "cyan-300": $cyan-300,
-        "cyan-400": $cyan-400,
-        "cyan-500": $cyan-500,
-        "cyan-600": $cyan-600,
-        "cyan-700": $cyan-700,
-        "cyan-800": $cyan-800,
-        "cyan-900": $cyan-900,
-
-        "yellow": $yellow,
-        "yellow-50": $yellow-50,
-        "yellow-100": $yellow-100,
-        "yellow-200": $yellow-200,
-        "yellow-300": $yellow-300,
-        "yellow-400": $yellow-400,
-        "yellow-500": $yellow-500,
-        "yellow-600": $yellow-600,
-        "yellow-700": $yellow-700,
-        "yellow-800": $yellow-800,
-        "yellow-900": $yellow-900,
-
-        "magenta": $magenta,
-        "magenta-50": $magenta-50,
-        "magenta-100": $magenta-100,
-        "magenta-200": $magenta-200,
-        "magenta-300": $magenta-300,
-        "magenta-400": $magenta-400,
-        "magenta-500": $magenta-500,
-        "magenta-600": $magenta-600,
-        "magenta-700": $magenta-700,
-        "magenta-800": $magenta-800,
-        "magenta-900": $magenta-900,
-
-  // Backgrounds / Containers
-        "text": $text,
-        "background": $background,
-        "container": $container,
-        "card": $card,
-        "input": $input,
-        "placeholder": $placeholder,
-
-  // Fonts
-        "font": $font,
-        "font-code": $font-code,
-        "font-heading": $font-heading,
-        "font-fancy": $font-fancy,
-        "font-size-tiny": $font-size-tiny,
-        "font-size-small": $font-size-small,
-        "font-size": $font-size,
-        "font-size-large": $font-size-large,
-        "font-size-huge": $font-size-huge,
-
-  // Misc
-        "border-radius-tiny": $border-radius-tiny,
-        "border-radius-small": $border-radius-small,
-        "border-radius": $border-radius,
-        "border-radius-large": $border-radius-large,
-
-        "button-padding-small": $button-padding-small,
-        "button-padding": $button-padding,
-        "button-padding-large": $button-padding-large
-);
+$card-padding: map-get($variables, "card-padding") !default;
+$card-border-radius: map-get($variables, "card-border-radius") !default;
 // endregion
 
 // endregion
